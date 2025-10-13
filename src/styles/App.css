@@ -1,0 +1,36 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Animación de entrada general */
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Smooth transitions entre secciones */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gray), transparent);
+  opacity: 0.3;
+}
+
+section:first-of-type::before {
+  display: none;
+}
+
