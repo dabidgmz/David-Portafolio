@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import '../styles/Contact.css'
 
 const Contact = () => {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,14 +26,11 @@ const Contact = () => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulación de envío (mock API)
-    // En producción, reemplazar con llamada real a API
     setTimeout(() => {
       console.log('Form data:', formData)
       setFormStatus('success')
       setIsSubmitting(false)
-      
-      // Limpiar formulario
+
       setFormData({
         name: '',
         email: '',
@@ -39,7 +38,6 @@ const Contact = () => {
         message: ''
       })
 
-      // Limpiar mensaje después de 5 segundos
       setTimeout(() => setFormStatus(null), 5000)
     }, 1500)
   }
@@ -48,22 +46,16 @@ const Contact = () => {
     <section id="contact" className="contact">
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">Let's Connect</span>
-          <h2 className="section-title">Contact</h2>
-          <p className="section-description">
-            Have a project in mind? Let's talk about how I can help you
-          </p>
+          <span className="section-tag">{t('contact.tag')}</span>
+          <h2 className="section-title">{t('contact.title')}</h2>
+          <p className="section-description">{t('contact.description')}</p>
         </div>
 
         <div className="contact-content">
           <div className="contact-info">
             <div className="contact-intro">
-              <h3>Let's Work Together</h3>
-              <p>
-                I'm available for freelance projects, collaborations and 
-                job opportunities. Don't hesitate to contact me to discuss 
-                your next project.
-              </p>
+              <h3>{t('contact.introTitle')}</h3>
+              <p>{t('contact.introText')}</p>
             </div>
 
             <div className="contact-methods">
@@ -106,14 +98,14 @@ const Contact = () => {
             </div>
 
             <div className="contact-cta">
-              <p className="cta-text">📍 Torreón, Coahuila, México</p>
-              <p className="cta-text">💼 Available for projects</p>
+              <p className="cta-text">{t('contact.location')}</p>
+              <p className="cta-text">{t('contact.available')}</p>
             </div>
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Full Name</label>
+              <label htmlFor="name">{t('contact.form.name')}</label>
               <input
                 type="text"
                 id="name"
@@ -121,12 +113,12 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                placeholder="Your name"
+                placeholder={t('contact.form.namePlaceholder')}
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">Email Address</label>
+              <label htmlFor="email">{t('contact.form.email')}</label>
               <input
                 type="email"
                 id="email"
@@ -134,12 +126,12 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                placeholder="your@email.com"
+                placeholder={t('contact.form.emailPlaceholder')}
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="subject">Subject</label>
+              <label htmlFor="subject">{t('contact.form.subject')}</label>
               <input
                 type="text"
                 id="subject"
@@ -147,12 +139,12 @@ const Contact = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                placeholder="How can I help you?"
+                placeholder={t('contact.form.subjectPlaceholder')}
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">{t('contact.form.message')}</label>
               <textarea
                 id="message"
                 name="message"
@@ -160,27 +152,27 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 rows="6"
-                placeholder="Tell me about your project..."
+                placeholder={t('contact.form.messagePlaceholder')}
               ></textarea>
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className="btn btn-primary btn-submit"
               disabled={isSubmitting}
             >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
+              {isSubmitting ? t('contact.form.sending') : t('contact.form.send')}
             </button>
 
             {formStatus === 'success' && (
               <div className="form-message success">
-                ✓ Message sent successfully! I'll get back to you soon.
+                {t('contact.form.success')}
               </div>
             )}
 
             {formStatus === 'error' && (
               <div className="form-message error">
-                ✗ There was an error sending the message. Please try again.
+                {t('contact.form.error')}
               </div>
             )}
           </form>
@@ -191,4 +183,3 @@ const Contact = () => {
 }
 
 export default Contact
-

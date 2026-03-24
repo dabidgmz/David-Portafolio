@@ -1,0 +1,222 @@
+{
+  "header": {
+    "nav": {
+      "about": "Sobre mí",
+      "projects": "Proyectos",
+      "skills": "Habilidades",
+      "education": "Educación",
+      "contact": "Contacto"
+    }
+  },
+  "hero": {
+    "badge": "Disponible para proyectos",
+    "title": "Hola, soy",
+    "subtitle": "Desarrollador de Software Jr. & Full-Stack",
+    "description": "Estudiante de la Universidad Tecnológica de Torreón, apasionado por el desarrollo web, móvil y sistemas embebidos. Líder de equipo, Scrum Master y desarrollador especializado en backend, administración de servidores y desarrollo móvil.",
+    "viewProjects": "Ver Proyectos",
+    "contactMe": "Contáctame",
+    "scroll": "Scroll",
+    "cards": {
+      "backend": "Backend Developer",
+      "servers": "Servidores",
+      "mobile": "Dev Móvil",
+      "scrum": "Scrum Master"
+    }
+  },
+  "about": {
+    "tag": "Sobre mí",
+    "title": "Sobre mí",
+    "description": "Desarrollador apasionado con experiencia en múltiples tecnologías y liderazgo de equipos",
+    "subtitle": "Desarrollador de Software Jr.",
+    "p1": "Soy estudiante de la <strong>Universidad Tecnológica de Torreón</strong>, enfocado en el desarrollo de software con experiencia práctica en proyectos reales que abarcan desarrollo web, móvil y sistemas embebidos.",
+    "p2": "Mi experiencia incluye trabajar con tecnologías modernas como <strong>React</strong>, <strong>Laravel</strong>, <strong>AdonisJS</strong>, <strong>Django</strong>, <strong>Python</strong> y <strong>Swift</strong>, además de liderar equipos de desarrollo bajo metodologías ágiles.",
+    "highlights": {
+      "leadership": {
+        "title": "Liderazgo de Equipo",
+        "desc": "Scrum Master y líder de equipo en proyectos de desarrollo full-stack"
+      },
+      "fullstack": {
+        "title": "Desarrollo Full-Stack",
+        "desc": "Backend con PHP, Laravel, AdonisJS, Django, Python y desarrollo móvil con React y Swift"
+      },
+      "embedded": {
+        "title": "Sistemas Embebidos",
+        "desc": "Desarrollo de software para dispositivos IoT y sistemas embebidos"
+      },
+      "database": {
+        "title": "Gestión de Bases de Datos",
+        "desc": "Diseño y administración de bases de datos relacionales y no relacionales"
+      }
+    },
+    "stats": {
+      "projects": "Proyectos Completados",
+      "technologies": "Tecnologías Dominadas",
+      "experience": "Años de Experiencia",
+      "microservices": "Microservicios Creados"
+    }
+  },
+  "skills": {
+    "tag": "Habilidades",
+    "title": "Habilidades Técnicas",
+    "description": "Stack tecnológico y herramientas con las que trabajo",
+    "categories": {
+      "languages": "Lenguajes de Programación",
+      "mobile": "Desarrollo Móvil",
+      "backend": "Backend & Frameworks",
+      "databases": "Bases de Datos",
+      "servers": "Servidores & Cloud",
+      "methodologies": "Metodologías & Herramientas"
+    },
+    "otherTitle": "Otras Habilidades",
+    "other": [
+      "Administración de Servidores",
+      "Ciberseguridad",
+      "Desarrollo Web Backend",
+      "Diseño de Bases de Datos",
+      "REST APIs",
+      "Sistemas Embebidos",
+      "Arquitectura de Microservicios",
+      "Control de Versiones"
+    ]
+  },
+  "projects": {
+    "tag": "Portafolio",
+    "title": "Proyectos & Experiencia",
+    "description": "Proyectos destacados que demuestran mis habilidades técnicas y liderazgo",
+    "keyHighlights": "Puntos Clave:",
+    "viewProject": "Ver Proyecto →",
+    "list": [
+      {
+        "title": "Clinicore",
+        "period": "Enero 2025 - Abril 2025",
+        "role": "Líder de Equipo & Scrum Master",
+        "description": "Sistema integral de gestión clínica con microservicios y software embebido",
+        "highlights": [
+          "Liderazgo del equipo de desarrollo full-stack",
+          "Backend con PHP, Laravel y AdonisJS",
+          "Desarrollo móvil con React",
+          "Software embebido para leer peso, talla y temperatura",
+          "Arquitectura de 3 microservicios",
+          "Bases de datos relacionales y no relacionales",
+          "Gestión de servidores y ciberseguridad",
+          "Scrum Master con gestión en Asana"
+        ]
+      },
+      {
+        "title": "Juego de Mensajería Encriptada",
+        "period": "Septiembre 2024 - Diciembre 2024",
+        "role": "Backend Developer & DevOps",
+        "description": "Juego interactivo con sistema de mensajería en tiempo real y cifrado de extremo a extremo",
+        "highlights": [
+          "Backend con AdonisJS y TypeScript",
+          "Comunicación en tiempo real con Socket.IO",
+          "Integración con Unity para el cliente del juego",
+          "Administración y configuración de servidores",
+          "Cifrado de mensajes en tiempo real",
+          "Sistema de autenticación seguro"
+        ]
+      },
+      {
+        "title": "Proyecto Integrador 2",
+        "period": "Febrero 2024 - Abril 2024",
+        "role": "Desarrollador Móvil iOS",
+        "description": "Aplicación móvil iOS para gestión de citas médicas con backend REST",
+        "highlights": [
+          "Desarrollo nativo iOS con Swift",
+          "Interfaz de usuario moderna con UIKit",
+          "Integración con backend REST API",
+          "Sistema de registro y autenticación",
+          "Gestión de citas y consultas",
+          "Visualización de información de pacientes"
+        ]
+      },
+      {
+        "title": "Data Analytics Dashboard",
+        "period": "Junio 2024 - Agosto 2024",
+        "role": "Backend Developer & Analista de Datos",
+        "description": "Plataforma de análisis de datos con backend Django y visualizaciones interactivas con pandas y matplotlib",
+        "highlights": [
+          "Desarrollo backend con Django REST Framework",
+          "Procesamiento y análisis de datos con pandas",
+          "Visualizaciones interactivas con matplotlib",
+          "Diseño y optimización de base de datos PostgreSQL",
+          "REST API para consumo de datos",
+          "Pipelines de limpieza y preprocesamiento de datos",
+          "Funcionalidades de análisis estadístico e informes",
+          "Actualizaciones del dashboard en tiempo real"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "tag": "Educación",
+    "title": "Educación",
+    "description": "Mi trayectoria académica en desarrollo de software",
+    "degree": "Desarrollo de Software",
+    "institution": "Universidad Tecnológica de Torreón",
+    "status": "En curso",
+    "specializationTitle": "Áreas de Especialización:",
+    "specializations": [
+      "Desarrollo Web Full-Stack",
+      "Desarrollo de Aplicaciones Móviles",
+      "Bases de Datos y Arquitectura de Software",
+      "Administración de Servidores",
+      "Sistemas Embebidos e IoT",
+      "Metodologías Ágiles (Scrum)",
+      "Ciberseguridad"
+    ],
+    "achievements": {
+      "leader": {
+        "title": "Líder de Proyecto",
+        "desc": "Experiencia liderando equipos en proyectos integradores"
+      },
+      "scrum": {
+        "title": "Scrum Master Certificado",
+        "desc": "Gestión ágil de proyectos con metodología Scrum"
+      },
+      "projects": {
+        "title": "Proyectos Reales",
+        "desc": "Desarrollo de soluciones para clientes y empresas"
+      }
+    },
+    "certTitle": "Certificaciones & Conocimientos",
+    "certs": {
+      "scrum": "Scrum Master",
+      "cybersecurity": "Ciberseguridad",
+      "cloud": "Computación en la Nube",
+      "database": "Diseño de Bases de Datos"
+    }
+  },
+  "contact": {
+    "tag": "Conectemos",
+    "title": "Contacto",
+    "description": "¿Tienes un proyecto en mente? Hablemos de cómo puedo ayudarte",
+    "introTitle": "Trabajemos Juntos",
+    "introText": "Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales. No dudes en contactarme para hablar sobre tu próximo proyecto.",
+    "location": "📍 Torreón, Coahuila, México",
+    "available": "💼 Disponible para proyectos",
+    "form": {
+      "name": "Nombre Completo",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "tu@correo.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿Cómo puedo ayudarte?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "✓ ¡Mensaje enviado con éxito! Me pondré en contacto pronto.",
+      "error": "✗ Hubo un error al enviar el mensaje. Por favor intenta de nuevo."
+    }
+  },
+  "footer": {
+    "description": "Desarrollador de Software Jr. especializado en desarrollo full-stack, liderazgo de equipos y metodologías ágiles.",
+    "navigation": "Navegación",
+    "technologies": "Tecnologías",
+    "contact": "Contacto",
+    "contactForm": "Formulario de Contacto",
+    "copyright": "Hecho con React y mucho ☕",
+    "available": "Disponible para proyectos freelance y colaboraciones"
+  }
+}

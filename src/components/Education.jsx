@@ -1,17 +1,19 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { CiUser, CiSettings, CiDesktop, CiMobile1, CiLock, CiCloud, CiDatabase } from 'react-icons/ci'
 import '../styles/Education.css'
 
 const Education = () => {
+  const { t } = useTranslation()
+  const specializations = t('education.specializations', { returnObjects: true })
+
   return (
     <section id="education" className="education">
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">Education</span>
-          <h2 className="section-title">Education</h2>
-          <p className="section-description">
-            My academic journey in software development
-          </p>
+          <span className="section-tag">{t('education.tag')}</span>
+          <h2 className="section-title">{t('education.title')}</h2>
+          <p className="section-description">{t('education.description')}</p>
         </div>
 
         <div className="education-content">
@@ -26,27 +28,17 @@ const Education = () => {
             </div>
 
             <div className="education-info">
-              <h3 className="education-degree">
-                Software Development
-              </h3>
-              <p className="education-institution">
-                Universidad Tecnológica de Torreón
-              </p>
-              <p className="education-period">
-                In Progress
-              </p>
+              <h3 className="education-degree">{t('education.degree')}</h3>
+              <p className="education-institution">{t('education.institution')}</p>
+              <p className="education-period">{t('education.status')}</p>
             </div>
 
             <div className="education-details">
-              <h4>Specialization Areas:</h4>
+              <h4>{t('education.specializationTitle')}</h4>
               <ul className="education-list">
-                <li>Full-Stack Web Development</li>
-                <li>Mobile Application Development</li>
-                <li>Databases and Software Architecture</li>
-                <li>Server Administration</li>
-                <li>Embedded Systems and IoT</li>
-                <li>Agile Methodologies (Scrum)</li>
-                <li>Cybersecurity</li>
+                {specializations.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
 
@@ -56,8 +48,8 @@ const Education = () => {
                   <CiUser />
                 </div>
                 <div className="achievement-text">
-                  <strong>Project Leader</strong>
-                  <p>Experience leading teams in integrative projects</p>
+                  <strong>{t('education.achievements.leader.title')}</strong>
+                  <p>{t('education.achievements.leader.desc')}</p>
                 </div>
               </div>
 
@@ -66,8 +58,8 @@ const Education = () => {
                   <CiSettings />
                 </div>
                 <div className="achievement-text">
-                  <strong>Certified Scrum Master</strong>
-                  <p>Agile project management with Scrum methodology</p>
+                  <strong>{t('education.achievements.scrum.title')}</strong>
+                  <p>{t('education.achievements.scrum.desc')}</p>
                 </div>
               </div>
 
@@ -76,31 +68,31 @@ const Education = () => {
                   <CiDesktop />
                 </div>
                 <div className="achievement-text">
-                  <strong>Real Projects</strong>
-                  <p>Development of solutions for clients and companies</p>
+                  <strong>{t('education.achievements.projects.title')}</strong>
+                  <p>{t('education.achievements.projects.desc')}</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="certifications">
-            <h3 className="certifications-title">Certifications & Knowledge</h3>
+            <h3 className="certifications-title">{t('education.certTitle')}</h3>
             <div className="certifications-grid">
               <div className="cert-badge">
                 <CiMobile1 className="cert-icon" />
-                <span className="cert-text">Scrum Master</span>
+                <span className="cert-text">{t('education.certs.scrum')}</span>
               </div>
               <div className="cert-badge">
                 <CiLock className="cert-icon" />
-                <span className="cert-text">Cybersecurity</span>
+                <span className="cert-text">{t('education.certs.cybersecurity')}</span>
               </div>
               <div className="cert-badge">
                 <CiCloud className="cert-icon" />
-                <span className="cert-text">Cloud Computing</span>
+                <span className="cert-text">{t('education.certs.cloud')}</span>
               </div>
               <div className="cert-badge">
                 <CiDatabase className="cert-icon" />
-                <span className="cert-text">Database Design</span>
+                <span className="cert-text">{t('education.certs.database')}</span>
               </div>
             </div>
           </div>
@@ -111,4 +103,3 @@ const Education = () => {
 }
 
 export default Education
-

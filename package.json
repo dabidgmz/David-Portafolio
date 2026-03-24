@@ -11,8 +11,10 @@
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
+    "i18next": "^25.10.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^16.6.6",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {

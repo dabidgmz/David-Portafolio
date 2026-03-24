@@ -154,3 +154,18 @@
   }
 }
 
+.lang-toggle {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border: 1.5px solid var(--primary-color) !important;
+  border-radius: 6px !important;
+  padding: 4px 10px !important;
+  color: var(--primary-color) !important;
+  transition: background var(--transition-base), color var(--transition-base);
+}
+
+.lang-toggle:hover {
+  background: var(--primary-color) !important;
+  color: var(--white) !important;
+}
+

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import '../styles/Header.css'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { t, i18n } = useTranslation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +24,10 @@ const Header = () => {
     }
   }
 
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en')
+  }
+
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
@@ -31,14 +37,17 @@ const Header = () => {
         </div>
 
         <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-          <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
-          <button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button>
-          <button onClick={() => scrollToSection('skills')} className="nav-link">Skills</button>
-          <button onClick={() => scrollToSection('education')} className="nav-link">Education</button>
-          <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
+          <button onClick={() => scrollToSection('about')} className="nav-link">{t('header.nav.about')}</button>
+          <button onClick={() => scrollToSection('projects')} className="nav-link">{t('header.nav.projects')}</button>
+          <button onClick={() => scrollToSection('skills')} className="nav-link">{t('header.nav.skills')}</button>
+          <button onClick={() => scrollToSection('education')} className="nav-link">{t('header.nav.education')}</button>
+          <button onClick={() => scrollToSection('contact')} className="nav-link">{t('header.nav.contact')}</button>
+          <button onClick={toggleLanguage} className="nav-link lang-toggle" aria-label="Toggle language">
+            {i18n.language === 'en' ? 'ES' : 'EN'}
+          </button>
         </nav>
 
-        <button 
+        <button
           className="mobile-menu-toggle"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
@@ -53,4 +62,3 @@ const Header = () => {
 }
 
 export default Header
-
