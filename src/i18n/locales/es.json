@@ -62,6 +62,21 @@
     "description": "Trayectoria profesional y proyectos académicos destacados",
     "items": [
       {
+        "id": "abasa",
+        "type": "work",
+        "typeLabel": "Trabajo",
+        "title": "Full Stack Developer",
+        "company": "ABASA",
+        "period": "Nov 2025 – Presente",
+        "bullets": [
+          "Construyendo una plataforma ERP empresarial con copilotos de IA para gestión de RRHH, activos y cumplimiento fiscal",
+          "Integré timbrado SAT/CFDI 4.0 vía PAC (Finkok, SW Sapien) para generación automatizada de facturas",
+          "Diseñé agentes LLM con Claude AI y OpenAI con pipelines RAG sobre repositorios de documentos fiscales y legales",
+          "Implementé conciliación de pagos con Stripe y OpenPay; desplegué infraestructura completa en Docker y cloud"
+        ],
+        "tags": ["Astro", "TypeScript", "Claude AI", "SAT/CFDI 4.0", "Python", "Docker", "OpenAI"]
+      },
+      {
         "id": "solvex",
         "type": "work",
         "typeLabel": "Trabajo",

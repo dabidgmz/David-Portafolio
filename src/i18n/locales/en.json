@@ -62,6 +62,21 @@
     "description": "Professional trajectory and highlighted academic projects",
     "items": [
       {
+        "id": "abasa",
+        "type": "work",
+        "typeLabel": "Work",
+        "title": "Full Stack Developer",
+        "company": "ABASA",
+        "period": "Nov 2025 – Present",
+        "bullets": [
+          "Building an enterprise ERP platform with AI copilots for HR management, asset tracking and fiscal compliance workflows",
+          "Integrated SAT/CFDI 4.0 timbrado via PAC providers (Finkok, SW Sapien) for automated invoice generation",
+          "Engineered LLM agents using Claude AI and OpenAI with RAG pipelines over fiscal and legal document repositories",
+          "Implemented payment reconciliation with Stripe and OpenPay; deployed full infrastructure on Docker and cloud"
+        ],
+        "tags": ["Astro", "TypeScript", "Claude AI", "SAT/CFDI 4.0", "Python", "Docker", "OpenAI"]
+      },
+      {
         "id": "solvex",
         "type": "work",
         "typeLabel": "Work",
