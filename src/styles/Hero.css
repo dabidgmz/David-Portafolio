@@ -251,49 +251,33 @@
 
 .hero-scroll-indicator {
   position: absolute;
-  bottom: 40px;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   color: var(--dark-gray);
-  font-size: 14px;
-  font-weight: 500;
-  animation: fadeIn 1s ease-out 1s, pulse 2s ease-in-out 2s infinite;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  cursor: pointer;
+  animation: fadeIn 1s ease-out 1.2s both, bounce 2s ease-in-out 2.5s infinite;
+  font-family: var(--font-family);
+  transition: color var(--transition-base);
 }
 
-.scroll-arrow {
-  width: 24px;
-  height: 36px;
-  border: 2px solid var(--primary-blue);
-  border-radius: 16px;
-  position: relative;
+.hero-scroll-indicator:hover {
+  color: var(--primary-blue);
 }
 
-.scroll-arrow::after {
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 8px;
-  background: var(--primary-blue);
-  border-radius: 2px;
-  animation: scrollDown 2s ease-in-out infinite;
-}
-
-@keyframes scrollDown {
-  0%, 100% {
-    top: 8px;
-    opacity: 1;
-  }
-  50% {
-    top: 18px;
-    opacity: 0.3;
-  }
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(5px); }
 }
 
 /* Responsive */

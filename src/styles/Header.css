@@ -91,21 +91,33 @@
   transform: scaleX(1);
 }
 
-.mobile-menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
+/* Scroll progress bar */
+.scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width 0.1s linear;
+  z-index: 10;
 }
 
-.mobile-menu-toggle span {
-  width: 25px;
-  height: 2px;
-  background: var(--primary-blue);
+.mobile-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1.5px solid var(--gray);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 6px;
+  color: var(--text-dark);
   transition: all var(--transition-base);
+}
+
+.mobile-menu-toggle:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
 }
 
 /* Mobile Styles */

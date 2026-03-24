@@ -36,8 +36,47 @@
 }
 
 .education-icon {
-  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  background: var(--gradient-light);
+  border-radius: 20px;
+  color: var(--primary-blue);
+  margin: 0 auto 32px;
   animation: float 6s ease-in-out infinite;
+}
+
+.education-status {
+  display: inline-block;
+  padding: 6px 18px;
+  background: var(--gradient-light);
+  color: var(--primary-blue);
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.education-list {
+  list-style: none !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.education-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: var(--dark-gray);
+}
+
+.education-list li svg {
+  color: var(--primary-blue);
+  flex-shrink: 0;
 }
 
 .education-info {

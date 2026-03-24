@@ -11,48 +11,48 @@
   "hero": {
     "badge": "Available for projects",
     "title": "Hello, I'm",
-    "subtitle": "Full Stack Developer | AI Integrations | ERP Systems",
-    "description": "Student at Universidad Tecnológica de Torreón, building enterprise ERP platforms with AI-assisted workflows and fiscal API integrations (SAT/CFDI). Scrum Master, team leader, and developer specialized in backend, mobile and cloud infrastructure.",
+    "subtitle": "Full Stack Developer · AI Integrations · ERP Systems",
+    "description": "Building enterprise ERP platforms with AI-assisted workflows, fiscal API integrations (SAT/CFDI), and scalable backend architectures. Scrum Master & team leader.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me",
     "scroll": "Scroll",
     "cards": {
-      "backend": "Backend Developer",
+      "backend": "Backend Dev",
       "servers": "DevOps & Cloud",
       "mobile": "Mobile Dev",
-      "scrum": "AI Integrations"
+      "ai": "AI Integrations"
     }
   },
   "about": {
     "tag": "About Me",
     "title": "About Me",
-    "description": "Passionate developer building ERP systems, AI integrations and fiscal compliance solutions",
+    "description": "Developer building ERP systems, AI integrations and fiscal compliance solutions",
     "subtitle": "Full Stack Developer",
-    "p1": "I am a student at <strong>Universidad Tecnológica de Torreón</strong>, focused on software development with practical experience in real projects — from web and mobile apps to enterprise ERP dashboards with embedded AI copilots.",
-    "p2": "I specialize in connecting intelligent systems and fiscal compliance APIs into production-grade platforms: <strong>Claude AI</strong>, <strong>OpenAI</strong>, <strong>LangChain</strong>, <strong>SAT/CFDI 4.0</strong> integrations, and payment reconciliation with <strong>OpenPay</strong> and <strong>Stripe</strong>.",
+    "p1": "Student at <strong>Universidad Tecnológica de Torreón</strong> with hands-on experience across real production projects — from web and mobile apps to enterprise ERP dashboards with embedded AI copilots.",
+    "p2": "I specialize in connecting intelligent systems and fiscal APIs into production platforms: <strong>Claude AI</strong>, <strong>OpenAI</strong>, <strong>LangChain</strong>, <strong>SAT/CFDI 4.0</strong> timbrado, and payment reconciliation with <strong>Stripe</strong> and <strong>OpenPay</strong>.",
     "highlights": {
       "leadership": {
         "title": "Team Leadership",
-        "desc": "Scrum Master and team leader in full-stack development projects"
+        "desc": "Scrum Master and team leader in production full-stack projects"
       },
       "fullstack": {
         "title": "Full-Stack & ERP",
-        "desc": "Enterprise dashboards with Astro, React, Laravel, AdonisJS, Django and AI-assisted workflows"
+        "desc": "Enterprise dashboards with Astro, React, Laravel, AdonisJS, Django and AI workflows"
       },
-      "embedded": {
+      "ai": {
         "title": "AI & Fiscal Integrations",
-        "desc": "LLM agents, RAG pipelines, SAT/CFDI 4.0 timbrado, PAC integrations and payment APIs"
+        "desc": "LLM agents, RAG pipelines, SAT/CFDI 4.0 timbrado and payment APIs"
       },
       "database": {
-        "title": "Database & Cloud",
-        "desc": "Design and administration of SQL/NoSQL databases, Docker, AWS, DigitalOcean"
+        "title": "Cloud & Infrastructure",
+        "desc": "SQL/NoSQL databases, Docker, AWS, DigitalOcean, server administration"
       }
     },
     "stats": {
       "projects": "Completed Projects",
-      "technologies": "Technologies Mastered",
+      "technologies": "Technologies",
       "experience": "Years of Experience",
-      "microservices": "Microservices Created"
+      "microservices": "Microservices"
     }
   },
   "skills": {
@@ -61,7 +61,7 @@
     "description": "Full tech stack — from frontend to AI integrations and fiscal compliance",
     "categories": {
       "frontend": "Frontend",
-      "languages": "Programming Languages",
+      "languages": "Languages",
       "mobile": "Mobile & Game Dev",
       "backend": "Backend & Frameworks",
       "databases": "Databases",
@@ -69,7 +69,7 @@
       "methodologies": "Methodologies & Tools",
       "ai": "AI & Integrations"
     },
-    "otherTitle": "Other Skills",
+    "otherTitle": "Also working with",
     "other": [
       "Server Administration",
       "Cybersecurity",
@@ -79,75 +79,178 @@
       "Embedded Systems",
       "Microservices Architecture",
       "RAG Pipelines",
-      "Version Control"
+      "Version Control",
+      "Level Design",
+      "PWA / Service Workers",
+      "QR Code Systems"
     ]
   },
   "projects": {
     "tag": "Portfolio",
     "title": "Projects & Experience",
-    "description": "Featured projects demonstrating AI integrations, ERP systems and full-stack leadership",
-    "keyHighlights": "Key Highlights:",
-    "viewProject": "View Project →",
+    "description": "Production apps, AI integrations, games and hackathon projects",
+    "keyHighlights": "Highlights",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "filters": {
+      "all": "All",
+      "erp": "Web & ERP",
+      "mobile": "Mobile & PWA",
+      "games": "Game Dev",
+      "hackathon": "Hackathon"
+    },
     "list": [
       {
+        "id": "abasa",
+        "category": "erp",
         "title": "ABASA ERP Dashboard",
-        "period": "2025 - Present",
+        "period": "2025 — Present",
         "role": "Full Stack Developer & AI Integrations",
-        "description": "Enterprise resource planning system built with Astro + TypeScript, featuring HR asset management, AI-assisted workflows and fiscal API integrations for Mexican tax compliance (SAT/CFDI 4.0)",
+        "description": "Enterprise ERP with AI copilots, HR asset management, and SAT/CFDI 4.0 fiscal integrations. Built with Astro + TypeScript for production-grade performance.",
+        "tags": ["Astro", "TypeScript", "Claude AI", "SAT/CFDI 4.0", "Python", "Docker"],
         "highlights": [
           "ERP dashboard with Astro + TypeScript",
-          "AI copilot for asset management and HR workflows",
-          "SAT/CFDI 4.0 fiscal integration — timbrado via PAC",
+          "AI copilot embedded for HR and asset workflows",
+          "SAT/CFDI 4.0 timbrado via PAC (Finkok, SW Sapien)",
           "LLM agents with Claude AI and OpenAI",
-          "RAG-powered document search over fiscal records",
-          "Real-time SAT validation (RFC lookup, CSD status)",
-          "Payment reconciliation with OpenPay / Stripe",
-          "Deployed on cloud infrastructure with Docker"
-        ]
+          "RAG search over fiscal and legal records",
+          "Payment reconciliation with Stripe / OpenPay",
+          "Deployed on cloud with Docker"
+        ],
+        "link": "https://github.com/dabidgmz/ABASA-ERP-DASHBOARD",
+        "linkType": "code"
       },
       {
-        "title": "Clinicore",
-        "period": "January 2025 - April 2025",
-        "role": "Team Leader & Scrum Master",
-        "description": "Comprehensive clinical management system with microservices and embedded software",
+        "id": "smarttrack",
+        "category": "hackathon",
+        "title": "SmartTrack",
+        "period": "HackMTY 2025",
+        "role": "Full Stack Developer",
+        "description": "Intelligent logistics management PWA built at HackMTY 2025 for GateGroup. Gemini AI agents automate airline trolley checklists and inventory validation.",
+        "tags": ["Laravel", "Angular", "Gemini AI", "PWA", "Gamification"],
         "highlights": [
-          "Full-stack development team leadership",
-          "Backend with PHP, Laravel and AdonisJS",
-          "Mobile development with React",
-          "Embedded software to read weight, height and temperature",
-          "3 microservices architecture",
-          "Relational and non-relational databases",
-          "Server management and cybersecurity",
-          "Scrum Master with Asana management"
-        ]
+          "HackMTY 2025 — GateGroup logistics challenge",
+          "PWA with Laravel backend + Angular frontend",
+          "Gemini AI agents generating smart checklists from orders",
+          "Real-time inventory validation with instant alerts",
+          "Gamified platform with achievements and AI micro-coaching",
+          "Compliance with airline regulations and client policies"
+        ],
+        "link": null,
+        "linkType": null
       },
       {
+        "id": "clinicore",
+        "category": "erp",
+        "title": "Clinicore",
+        "period": "Jan 2025 — Apr 2025",
+        "role": "Team Leader & Scrum Master",
+        "description": "Integrated clinical management system with microservices architecture, biometric embedded software, and cross-platform mobile app.",
+        "tags": ["PHP", "Laravel", "AdonisJS", "React", "IoT", "Microservices"],
+        "highlights": [
+          "Full-stack team leadership + Scrum Master",
+          "Backend with PHP, Laravel and AdonisJS",
+          "Cross-platform mobile app with React",
+          "Embedded software reading weight, height, temperature",
+          "3 independent microservices with relational + NoSQL DBs",
+          "Server management, cybersecurity and DevOps"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "pokeup",
+        "category": "mobile",
+        "title": "PokeUp Trainer",
+        "period": "Oct 2025 — Dec 2025",
+        "role": "Mobile PWA Developer",
+        "description": "Progressive Web App for Pokémon trainers built with Ionic React. Features Service Workers for offline support, QR code capture, and team management.",
+        "tags": ["Ionic React", "PWA", "Service Workers", "QR Codes", "TypeScript"],
+        "highlights": [
+          "PWA with Ionic React + Service Workers (offline-first)",
+          "QR code Pokémon capture system",
+          "Team management — up to 6 Pokémon + box storage",
+          "Trainer Profile with role system",
+          "Full Pokémon history with stats and characteristics",
+          "Native-like mobile experience"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "battleos",
+        "category": "games",
+        "title": "Battle OS",
+        "period": "Sep 2025 — Dec 2025",
+        "role": "Game Developer & Team Lead",
+        "description": "Educational 2D battle game in Unity where players defeat enemies using real Linux commands. Teaches Operating Systems concepts through interactive gameplay.",
+        "tags": ["Unity", "C#", "2D", "Linux", "Educational"],
+        "highlights": [
+          "Unity 2D game developed with C# in Visual Studio",
+          "Battle system: Linux commands are the attacks",
+          "Multiple enemy encounters requiring correct CLI usage",
+          "Educational focus on Operating Systems concepts",
+          "Team project under Scrum methodology",
+          "Universidad Tecnológica de Torreón integrative project"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "messaging",
+        "category": "erp",
         "title": "Encrypted Messaging Game",
-        "period": "September 2024 - December 2024",
+        "period": "Sep 2024 — Dec 2024",
         "role": "Backend Developer & DevOps",
-        "description": "Interactive game with real-time messaging system and end-to-end encryption",
+        "description": "Interactive multiplayer game with real-time end-to-end encrypted messaging. AdonisJS backend with Socket.IO and Unity game client.",
+        "tags": ["AdonisJS", "TypeScript", "Socket.IO", "Unity", "WebSockets"],
         "highlights": [
           "Backend with AdonisJS and TypeScript",
-          "Real-time communication with Socket.IO",
-          "Unity integration for game client",
-          "Server administration and configuration",
-          "Real-time message encryption",
+          "Real-time communication via Socket.IO",
+          "Unity game client integration",
+          "End-to-end message encryption",
+          "Server administration and DevOps",
           "Secure authentication system"
-        ]
+        ],
+        "link": "https://grrrverse.com/tel_encoded",
+        "linkType": "live"
       },
       {
+        "id": "ios",
+        "category": "mobile",
         "title": "Integrative Project 2",
-        "period": "February 2024 - April 2024",
+        "period": "Feb 2024 — Apr 2024",
         "role": "iOS Mobile Developer",
-        "description": "iOS mobile application for medical appointment management with REST backend",
+        "description": "Native iOS application for medical appointment management with REST backend integration. Built with Swift and UIKit.",
+        "tags": ["Swift", "Xcode", "iOS", "UIKit", "REST API"],
         "highlights": [
           "Native iOS development with Swift",
-          "Modern user interface with UIKit",
+          "Modern UI with UIKit",
           "REST API backend integration",
           "Registration and authentication system",
           "Appointment and consultation management",
           "Patient information visualization"
-        ]
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "pixel",
+        "category": "games",
+        "title": "Pixel Adventure 2D",
+        "period": "November 2025",
+        "role": "Game Developer",
+        "description": "2D platformer in Unity with C#. Five levels featuring a hearts health system, life-timer mechanic, enemies, and progressively challenging platform sections.",
+        "tags": ["Unity", "C#", ".NET", "2D Animation", "Level Design"],
+        "highlights": [
+          "Unity 2D platformer with C# scripting",
+          "5 levels with progressive difficulty",
+          "Heart-based health system + life-timer",
+          "Enemy AI and platform challenges",
+          "Focus on level design and game feel"
+        ],
+        "link": null,
+        "linkType": null
       }
     ]
   },
@@ -169,18 +272,9 @@
       "Cybersecurity"
     ],
     "achievements": {
-      "leader": {
-        "title": "Project Leader",
-        "desc": "Experience leading teams in integrative projects"
-      },
-      "scrum": {
-        "title": "Certified Scrum Master",
-        "desc": "Agile project management with Scrum methodology"
-      },
-      "projects": {
-        "title": "Real Projects",
-        "desc": "Development of solutions for clients and companies"
-      }
+      "leader": { "title": "Project Leader", "desc": "Experience leading teams in integrative projects" },
+      "scrum": { "title": "Certified Scrum Master", "desc": "Agile project management with Scrum methodology" },
+      "projects": { "title": "Real Projects", "desc": "Development of solutions for clients and companies" }
     },
     "certTitle": "Certifications & Knowledge",
     "certs": {
@@ -193,16 +287,16 @@
   "contact": {
     "tag": "Let's Connect",
     "title": "Contact",
-    "description": "Have a project in mind? Let's talk about how I can help you",
+    "description": "Have a project in mind? Let's talk",
     "introTitle": "Let's Work Together",
-    "introText": "I'm available for freelance projects, collaborations and job opportunities. Don't hesitate to contact me to discuss your next project.",
-    "location": "📍 Torreón, Coahuila, México",
-    "available": "💼 Available for projects",
+    "introText": "Available for freelance projects, collaborations and job opportunities. Reach me through WhatsApp for a quick response.",
+    "location": "Torreón, Coahuila, México",
+    "available": "Available for projects",
     "whatsappCta": "Chat on WhatsApp",
     "form": {
       "name": "Full Name",
       "namePlaceholder": "Your name",
-      "email": "Email Address",
+      "email": "Email",
       "emailPlaceholder": "your@email.com",
       "subject": "Subject",
       "subjectPlaceholder": "How can I help you?",
@@ -210,12 +304,12 @@
       "messagePlaceholder": "Tell me about your project...",
       "send": "Send Message",
       "sending": "Sending...",
-      "success": "✓ Message sent successfully! I'll get back to you soon.",
-      "error": "✗ There was an error sending the message. Please try again."
+      "success": "Message sent! I'll get back to you soon.",
+      "error": "There was an error. Please try again."
     }
   },
   "footer": {
-    "description": "Full Stack Developer specialized in ERP systems, AI integrations and fiscal compliance solutions.",
+    "description": "Full Stack Developer specialized in ERP systems, AI integrations and fiscal compliance.",
     "navigation": "Navigation",
     "technologies": "Technologies",
     "contact": "Contact",

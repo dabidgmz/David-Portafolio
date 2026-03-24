@@ -42,28 +42,25 @@
 
 .highlight-item {
   display: flex;
-  gap: 20px;
-  padding: 20px 24px;
+  gap: 16px;
+  padding: 18px 20px;
   background: var(--off-white);
-  border-radius: 16px;
-  border-left: 4px solid var(--primary-blue);
-  transition: all var(--transition-base);
+  border-radius: 14px;
+  border-left: 3px solid var(--accent, var(--primary-blue));
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
-.highlight-item:nth-child(2) { border-left-color: var(--secondary-blue); }
-.highlight-item:nth-child(3) { border-left-color: #6366f1; }
-.highlight-item:nth-child(4) { border-left-color: #8b5cf6; }
-
 .highlight-item:hover {
-  transform: translateX(8px);
+  transform: translateX(6px);
   box-shadow: var(--shadow-md);
 }
 
 .highlight-icon {
-  font-size: 28px;
   flex-shrink: 0;
-  color: var(--primary-blue);
+  color: var(--accent, var(--primary-blue));
   margin-top: 2px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .highlight-content h4 {
