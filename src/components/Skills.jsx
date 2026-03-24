@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { CiDesktop, CiMobile1, CiSettings, CiDatabase, CiCloud, CiServer } from 'react-icons/ci'
+import { CiDesktop, CiMobile1, CiSettings, CiDatabase, CiCloud, CiServer, CiGlobe, CiMonitor } from 'react-icons/ci'
 import '../styles/Skills.css'
 
 const Skills = () => {
@@ -8,26 +8,17 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      titleKey: 'skills.categories.languages',
-      icon: <CiDesktop />,
+      titleKey: 'skills.categories.frontend',
+      icon: <CiMonitor />,
       skills: [
-        { name: 'PHP', level: 85 },
-        { name: 'JavaScript', level: 90 },
+        { name: 'React', level: 90 },
+        { name: 'Next.js', level: 80 },
+        { name: 'Astro', level: 85 },
+        { name: 'Angular', level: 75 },
         { name: 'TypeScript', level: 85 },
-        { name: 'Java', level: 75 },
-        { name: 'C#', level: 70 },
-        { name: 'C++', level: 75 },
-        { name: 'Swift', level: 80 },
-        { name: 'Python', level: 85 }
-      ]
-    },
-    {
-      titleKey: 'skills.categories.mobile',
-      icon: <CiMobile1 />,
-      skills: [
-        { name: 'React Native', level: 85 },
-        { name: 'Swift/iOS', level: 80 },
-        { name: 'Xcode', level: 80 }
+        { name: 'Ionic', level: 75 },
+        { name: 'Bootstrap', level: 80 },
+        { name: 'Tauri', level: 70 }
       ]
     },
     {
@@ -39,8 +30,34 @@ const Skills = () => {
         { name: 'Node.js', level: 85 },
         { name: 'Django', level: 80 },
         { name: 'Flask', level: 75 },
-        { name: 'Microservicios', level: 80 },
-        { name: 'Socket.IO', level: 85 }
+        { name: '.NET', level: 70 },
+        { name: 'Socket.IO', level: 85 },
+        { name: 'Microservicios', level: 80 }
+      ]
+    },
+    {
+      titleKey: 'skills.categories.languages',
+      icon: <CiDesktop />,
+      skills: [
+        { name: 'JavaScript', level: 90 },
+        { name: 'PHP', level: 85 },
+        { name: 'Python', level: 85 },
+        { name: 'Swift', level: 80 },
+        { name: 'Kotlin', level: 72 },
+        { name: 'Java', level: 75 },
+        { name: 'C#', level: 70 },
+        { name: 'C++', level: 75 }
+      ]
+    },
+    {
+      titleKey: 'skills.categories.mobile',
+      icon: <CiMobile1 />,
+      skills: [
+        { name: 'React Native', level: 85 },
+        { name: 'Swift / iOS', level: 80 },
+        { name: 'Android / Kotlin', level: 72 },
+        { name: 'Xcode', level: 80 },
+        { name: 'Unity', level: 70 }
       ]
     },
     {
@@ -49,20 +66,34 @@ const Skills = () => {
       skills: [
         { name: 'MySQL', level: 90 },
         { name: 'PostgreSQL', level: 85 },
-        { name: 'Oracle', level: 75 },
-        { name: 'MongoDB', level: 80 }
+        { name: 'MongoDB', level: 80 },
+        { name: 'SQL Server', level: 75 },
+        { name: 'Oracle', level: 75 }
       ]
     },
     {
       titleKey: 'skills.categories.servers',
       icon: <CiCloud />,
       skills: [
-        { name: 'Rocky Linux', level: 85 },
+        { name: 'Docker', level: 80 },
+        { name: 'AWS', level: 72 },
+        { name: 'DigitalOcean', level: 80 },
         { name: 'Ubuntu Server', level: 90 },
-        { name: 'Azure', level: 75 },
-        { name: 'DevOps', level: 80 },
-        { name: 'Pandas', level: 85 },
-        { name: 'Matplotlib', level: 75 }
+        { name: 'Rocky Linux', level: 85 },
+        { name: 'Debian', level: 80 },
+        { name: 'DevOps', level: 78 }
+      ]
+    },
+    {
+      titleKey: 'skills.categories.ai',
+      icon: <CiGlobe />,
+      skills: [
+        { name: 'Claude AI', level: 85 },
+        { name: 'OpenAI / GPT-4', level: 82 },
+        { name: 'LangChain', level: 75 },
+        { name: 'SAT / CFDI 4.0', level: 85 },
+        { name: 'Stripe / OpenPay', level: 80 },
+        { name: 'Pandas / Matplotlib', level: 80 }
       ]
     },
     {
@@ -70,8 +101,8 @@ const Skills = () => {
       icon: <CiServer />,
       skills: [
         { name: 'Scrum', level: 90 },
+        { name: 'Git / GitHub', level: 90 },
         { name: 'Asana', level: 85 },
-        { name: 'Git/GitHub', level: 90 },
         { name: 'Diseño de BD', level: 85 }
       ]
     }

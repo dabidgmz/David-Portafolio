@@ -11,41 +11,41 @@
   "hero": {
     "badge": "Disponible para proyectos",
     "title": "Hola, soy",
-    "subtitle": "Desarrollador de Software Jr. & Full-Stack",
-    "description": "Estudiante de la Universidad Tecnológica de Torreón, apasionado por el desarrollo web, móvil y sistemas embebidos. Líder de equipo, Scrum Master y desarrollador especializado en backend, administración de servidores y desarrollo móvil.",
+    "subtitle": "Full Stack Developer | Integraciones AI | Sistemas ERP",
+    "description": "Estudiante de la Universidad Tecnológica de Torreón, construyendo plataformas ERP empresariales con flujos de trabajo asistidos por IA e integraciones fiscales (SAT/CFDI). Scrum Master, líder de equipo y desarrollador especializado en backend, móvil e infraestructura cloud.",
     "viewProjects": "Ver Proyectos",
     "contactMe": "Contáctame",
     "scroll": "Scroll",
     "cards": {
       "backend": "Backend Developer",
-      "servers": "Servidores",
+      "servers": "DevOps & Cloud",
       "mobile": "Dev Móvil",
-      "scrum": "Scrum Master"
+      "scrum": "Integraciones AI"
     }
   },
   "about": {
     "tag": "Sobre mí",
     "title": "Sobre mí",
-    "description": "Desarrollador apasionado con experiencia en múltiples tecnologías y liderazgo de equipos",
-    "subtitle": "Desarrollador de Software Jr.",
-    "p1": "Soy estudiante de la <strong>Universidad Tecnológica de Torreón</strong>, enfocado en el desarrollo de software con experiencia práctica en proyectos reales que abarcan desarrollo web, móvil y sistemas embebidos.",
-    "p2": "Mi experiencia incluye trabajar con tecnologías modernas como <strong>React</strong>, <strong>Laravel</strong>, <strong>AdonisJS</strong>, <strong>Django</strong>, <strong>Python</strong> y <strong>Swift</strong>, además de liderar equipos de desarrollo bajo metodologías ágiles.",
+    "description": "Desarrollador apasionado construyendo sistemas ERP, integraciones de IA y soluciones de cumplimiento fiscal",
+    "subtitle": "Full Stack Developer",
+    "p1": "Soy estudiante de la <strong>Universidad Tecnológica de Torreón</strong>, enfocado en el desarrollo de software con experiencia práctica en proyectos reales — desde apps web y móvil hasta dashboards ERP empresariales con copilotos de IA embebidos.",
+    "p2": "Me especializo en conectar sistemas inteligentes y APIs de cumplimiento fiscal en plataformas de producción: <strong>Claude AI</strong>, <strong>OpenAI</strong>, <strong>LangChain</strong>, integraciones <strong>SAT/CFDI 4.0</strong> y conciliación de pagos con <strong>OpenPay</strong> y <strong>Stripe</strong>.",
     "highlights": {
       "leadership": {
         "title": "Liderazgo de Equipo",
         "desc": "Scrum Master y líder de equipo en proyectos de desarrollo full-stack"
       },
       "fullstack": {
-        "title": "Desarrollo Full-Stack",
-        "desc": "Backend con PHP, Laravel, AdonisJS, Django, Python y desarrollo móvil con React y Swift"
+        "title": "Full-Stack & ERP",
+        "desc": "Dashboards empresariales con Astro, React, Laravel, AdonisJS, Django y flujos asistidos por IA"
       },
       "embedded": {
-        "title": "Sistemas Embebidos",
-        "desc": "Desarrollo de software para dispositivos IoT y sistemas embebidos"
+        "title": "IA & Integraciones Fiscales",
+        "desc": "Agentes LLM, pipelines RAG, timbrado SAT/CFDI 4.0, integraciones PAC y APIs de pagos"
       },
       "database": {
-        "title": "Gestión de Bases de Datos",
-        "desc": "Diseño y administración de bases de datos relacionales y no relacionales"
+        "title": "Bases de Datos & Cloud",
+        "desc": "Diseño y administración de bases SQL/NoSQL, Docker, AWS, DigitalOcean"
       }
     },
     "stats": {
@@ -58,34 +58,53 @@
   "skills": {
     "tag": "Habilidades",
     "title": "Habilidades Técnicas",
-    "description": "Stack tecnológico y herramientas con las que trabajo",
+    "description": "Stack completo — desde frontend hasta integraciones de IA y cumplimiento fiscal",
     "categories": {
+      "frontend": "Frontend",
       "languages": "Lenguajes de Programación",
-      "mobile": "Desarrollo Móvil",
+      "mobile": "Móvil & Game Dev",
       "backend": "Backend & Frameworks",
       "databases": "Bases de Datos",
-      "servers": "Servidores & Cloud",
-      "methodologies": "Metodologías & Herramientas"
+      "servers": "DevOps & Cloud",
+      "methodologies": "Metodologías & Herramientas",
+      "ai": "IA & Integraciones"
     },
     "otherTitle": "Otras Habilidades",
     "other": [
       "Administración de Servidores",
       "Ciberseguridad",
-      "Desarrollo Web Backend",
+      "REST APIs & Webhooks",
       "Diseño de Bases de Datos",
-      "REST APIs",
+      "Timbrado CFDI 4.0",
       "Sistemas Embebidos",
       "Arquitectura de Microservicios",
+      "Pipelines RAG",
       "Control de Versiones"
     ]
   },
   "projects": {
     "tag": "Portafolio",
     "title": "Proyectos & Experiencia",
-    "description": "Proyectos destacados que demuestran mis habilidades técnicas y liderazgo",
+    "description": "Proyectos destacados que demuestran integraciones de IA, sistemas ERP y liderazgo full-stack",
     "keyHighlights": "Puntos Clave:",
     "viewProject": "Ver Proyecto →",
     "list": [
+      {
+        "title": "ABASA ERP Dashboard",
+        "period": "2025 - Presente",
+        "role": "Full Stack Developer & Integraciones AI",
+        "description": "Sistema ERP empresarial construido con Astro + TypeScript, con gestión de activos de RRHH, flujos de trabajo asistidos por IA e integraciones fiscales para cumplimiento tributario mexicano (SAT/CFDI 4.0)",
+        "highlights": [
+          "Dashboard ERP con Astro + TypeScript",
+          "Copiloto IA para gestión de activos y RRHH",
+          "Integración fiscal SAT/CFDI 4.0 — timbrado vía PAC",
+          "Agentes LLM con Claude AI y OpenAI",
+          "Búsqueda de documentos con RAG sobre registros fiscales",
+          "Validación SAT en tiempo real (consulta RFC, estado CSD)",
+          "Conciliación de pagos con OpenPay / Stripe",
+          "Desplegado en infraestructura cloud con Docker"
+        ]
+      },
       {
         "title": "Clinicore",
         "period": "Enero 2025 - Abril 2025",
@@ -129,22 +148,6 @@
           "Gestión de citas y consultas",
           "Visualización de información de pacientes"
         ]
-      },
-      {
-        "title": "Data Analytics Dashboard",
-        "period": "Junio 2024 - Agosto 2024",
-        "role": "Backend Developer & Analista de Datos",
-        "description": "Plataforma de análisis de datos con backend Django y visualizaciones interactivas con pandas y matplotlib",
-        "highlights": [
-          "Desarrollo backend con Django REST Framework",
-          "Procesamiento y análisis de datos con pandas",
-          "Visualizaciones interactivas con matplotlib",
-          "Diseño y optimización de base de datos PostgreSQL",
-          "REST API para consumo de datos",
-          "Pipelines de limpieza y preprocesamiento de datos",
-          "Funcionalidades de análisis estadístico e informes",
-          "Actualizaciones del dashboard en tiempo real"
-        ]
       }
     ]
   },
@@ -160,7 +163,7 @@
       "Desarrollo Web Full-Stack",
       "Desarrollo de Aplicaciones Móviles",
       "Bases de Datos y Arquitectura de Software",
-      "Administración de Servidores",
+      "Administración de Servidores & DevOps",
       "Sistemas Embebidos e IoT",
       "Metodologías Ágiles (Scrum)",
       "Ciberseguridad"
@@ -211,7 +214,7 @@
     }
   },
   "footer": {
-    "description": "Desarrollador de Software Jr. especializado en desarrollo full-stack, liderazgo de equipos y metodologías ágiles.",
+    "description": "Full Stack Developer especializado en sistemas ERP, integraciones de IA y soluciones de cumplimiento fiscal.",
     "navigation": "Navegación",
     "technologies": "Tecnologías",
     "contact": "Contacto",

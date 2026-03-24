@@ -1,22 +1,27 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { CiMobile1, CiDesktop, CiSettings, CiServer } from 'react-icons/ci'
+import { CiMobile1, CiDesktop, CiSettings, CiServer, CiGlobe } from 'react-icons/ci'
 import '../styles/Projects.css'
 
 const projectIcons = [
+  <CiGlobe />,
   <CiDesktop />,
   <CiSettings />,
   <CiMobile1 />,
-  <CiServer />
 ]
 
-const projectLinks = [null, 'https://grrrverse.com/tel_encoded', null, null]
+const projectLinks = [
+  'https://github.com/dabidgmz/ABASA-ERP-DASHBOARD',
+  null,
+  'https://grrrverse.com/tel_encoded',
+  null
+]
 
 const projectTags = [
+  ['Astro', 'TypeScript', 'AI/LLM', 'SAT/CFDI', 'Python', 'Docker'],
   ['PHP', 'Laravel', 'AdonisJS', 'React', 'Microservicios', 'IoT'],
   ['AdonisJS', 'TypeScript', 'Socket.IO', 'Unity', 'WebSockets'],
-  ['Swift', 'Xcode', 'iOS', 'REST API', 'UIKit'],
-  ['Python', 'Django', 'Pandas', 'Matplotlib', 'PostgreSQL', 'REST API']
+  ['Swift', 'Xcode', 'iOS', 'REST API', 'UIKit']
 ]
 
 const Projects = () => {
@@ -38,10 +43,14 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`project-card ${activeProject === index ? 'active' : ''}`}
+              className={`project-card ${activeProject === index ? 'active' : ''} ${index === 0 ? 'project-featured' : ''}`}
               onMouseEnter={() => setActiveProject(index)}
               onMouseLeave={() => setActiveProject(null)}
             >
+              {index === 0 && (
+                <div className="project-badge">Featured</div>
+              )}
+
               <div className="project-header">
                 <span className="project-icon">{projectIcons[index]}</span>
                 <span className="project-period">{project.period}</span>

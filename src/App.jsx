@@ -1,4 +1,5 @@
 import React from 'react'
+import { ThemeProvider } from './context/ThemeContext'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -11,20 +12,21 @@ import './styles/App.css'
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Education />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Projects />
+          <Skills />
+          <Education />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   )
 }
 
 export default App
-
