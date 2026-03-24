@@ -1,6 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import emailjs from '@emailjs/browser'
 import '../styles/Contact.css'
+
+// EmailJS config — create a free account at https://emailjs.com
+// then add these to your .env file:
+//   VITE_EMAILJS_SERVICE_ID=service_xxxxxxx
+//   VITE_EMAILJS_TEMPLATE_ID=template_xxxxxxx
+//   VITE_EMAILJS_PUBLIC_KEY=xxxxxxxxxxxx
+const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
 const WhatsAppIcon = () => (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -10,6 +20,7 @@ const WhatsAppIcon = () => (
 
 const Contact = () => {
   const { t } = useTranslation()
+  const formRef = useRef(null)
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' })
   const [formStatus, setFormStatus] = useState(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -22,12 +33,35 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setTimeout(() => {
+    setFormStatus(null)
+
+    // If EmailJS keys are configured, send via EmailJS
+    if (EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY) {
+      try {
+        await emailjs.sendForm(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          formRef.current,
+          EMAILJS_PUBLIC_KEY
+        )
+        setFormStatus('success')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } catch {
+        setFormStatus('error')
+      } finally {
+        setIsSubmitting(false)
+        setTimeout(() => setFormStatus(null), 6000)
+      }
+    } else {
+      // Fallback: open email client
+      const subject = encodeURIComponent(formData.subject || 'Portfolio Contact')
+      const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)
+      window.open(`mailto:david.gmzherrera28@gmail.com?subject=${subject}&body=${body}`)
       setFormStatus('success')
       setIsSubmitting(false)
       setFormData({ name: '', email: '', subject: '', message: '' })
-      setTimeout(() => setFormStatus(null), 5000)
-    }, 1500)
+      setTimeout(() => setFormStatus(null), 6000)
+    }
   }
 
   return (
@@ -108,7 +142,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">{t('contact.form.name')}</label>
               <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required placeholder={t('contact.form.namePlaceholder')} />

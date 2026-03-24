@@ -33,6 +33,7 @@ const Footer = () => {
             <h4 className="footer-subtitle">{t('footer.navigation')}</h4>
             <ul className="footer-links">
               <li><button onClick={() => scrollTo('about')}>{t('header.nav.about')}</button></li>
+              <li><button onClick={() => scrollTo('experience')}>{t('header.nav.experience')}</button></li>
               <li><button onClick={() => scrollTo('projects')}>{t('header.nav.projects')}</button></li>
               <li><button onClick={() => scrollTo('skills')}>{t('header.nav.skills')}</button></li>
               <li><button onClick={() => scrollTo('education')}>{t('header.nav.education')}</button></li>

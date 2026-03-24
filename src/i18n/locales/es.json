@@ -2,6 +2,7 @@
   "header": {
     "nav": {
       "about": "Sobre mí",
+      "experience": "Experiencia",
       "projects": "Proyectos",
       "skills": "Habilidades",
       "education": "Educación",
@@ -54,6 +55,84 @@
       "experience": "Años de Experiencia",
       "microservices": "Microservicios"
     }
+  },
+  "experience": {
+    "tag": "Carrera",
+    "title": "Experiencia Laboral",
+    "description": "Trayectoria profesional y proyectos académicos destacados",
+    "items": [
+      {
+        "id": "solvex",
+        "type": "work",
+        "typeLabel": "Trabajo",
+        "title": "Junior Software Developer",
+        "company": "Solvex Management Solutions",
+        "period": "Mar 2025 – Sep 2025",
+        "bullets": [
+          "Diseñé y desarrollé plataformas e-commerce y landing pages con Next.js, Angular, Node.js y PHP",
+          "Integré pasarelas de pago y procesos de checkout seguros para múltiples clientes",
+          "Construí y desplegué chatbots con IA para soporte al cliente y consultas de productos",
+          "Administré hosting, despliegue y certificados SSL en AWS y DigitalOcean"
+        ],
+        "tags": ["Next.js", "Angular", "Node.js", "PHP", "AWS", "Chatbots IA"]
+      },
+      {
+        "id": "tecnomty",
+        "type": "work",
+        "typeLabel": "Trabajo",
+        "title": "Auxiliar Backend Developer / Mobile Developer",
+        "company": "TecnoMty",
+        "period": "May 2024 – Feb 2025",
+        "bullets": [
+          "Mantuve y mejoré servicios backend con TypeScript y AdonisJS 5",
+          "Desarrollé una app móvil MMA con React Native + Expo Go para iOS y Android",
+          "Integré REST APIs, optimicé endpoints y aseguré rendimiento multiplataforma",
+          "Colaboré con equipos multidisciplinarios para entregar funcionalidades a tiempo"
+        ],
+        "tags": ["TypeScript", "AdonisJS 5", "React Native", "Expo Go", "REST API"]
+      },
+      {
+        "id": "clinicore-exp",
+        "type": "academic",
+        "typeLabel": "Académico",
+        "title": "CliniCore — Sistema Clínico Multiplataforma",
+        "company": "Universidad Tecnológica de Torreón",
+        "period": "2025",
+        "bullets": [
+          "Lideré un ecosistema multiplataforma: API Laravel, microservicios AdonisJS, apps Next.js (Tauri), apps Swift iOS e integraciones ESP32",
+          "Diseñé APIs RESTful, módulos de pacientes, agendamiento de citas y procesamiento de datos de sensores en tiempo real",
+          "Desplegué en DigitalOcean con balanceo de carga, SSL y gestión de variables de entorno"
+        ],
+        "tags": ["Laravel", "AdonisJS", "Next.js", "Tauri", "Swift", "ESP32", "DigitalOcean"]
+      },
+      {
+        "id": "ios-exp",
+        "type": "academic",
+        "typeLabel": "Académico",
+        "title": "My Little Assistant — App iOS en Swift",
+        "company": "Proyecto Personal / Académico",
+        "period": "2025",
+        "bullets": [
+          "Construí una app iOS en Swift consumiendo REST APIs para gestión de tareas y asistencia personal",
+          "Implementé UI/UX limpia, networking asíncrono y almacenamiento local persistente"
+        ],
+        "tags": ["Swift", "Xcode", "REST API", "UIKit"]
+      },
+      {
+        "id": "infra-exp",
+        "type": "academic",
+        "typeLabel": "Académico",
+        "title": "Infraestructura y Gestión de Bases de Datos",
+        "company": "Universidad Tecnológica de Torreón",
+        "period": "2025",
+        "bullets": [
+          "Administré servidores AWS y DigitalOcean con Rocky Linux y Ubuntu para despliegue, seguridad y escalado",
+          "Gestioné clústeres MySQL/MariaDB, backups y accesos de usuarios",
+          "Implementé proxies inversos Nginx, gestión de procesos PM2 y certificados SSL"
+        ],
+        "tags": ["AWS", "DigitalOcean", "Rocky Linux", "MySQL", "Nginx", "PM2"]
+      }
+    ]
   },
   "skills": {
     "tag": "Habilidades",

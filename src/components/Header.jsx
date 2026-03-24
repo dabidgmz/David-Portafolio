@@ -32,11 +32,12 @@ const Header = () => {
   }
 
   const navLinks = [
-    { id: 'about',     label: t('header.nav.about') },
-    { id: 'projects',  label: t('header.nav.projects') },
-    { id: 'skills',    label: t('header.nav.skills') },
-    { id: 'education', label: t('header.nav.education') },
-    { id: 'contact',   label: t('header.nav.contact') },
+    { id: 'about',      label: t('header.nav.about') },
+    { id: 'experience', label: t('header.nav.experience') },
+    { id: 'projects',   label: t('header.nav.projects') },
+    { id: 'skills',     label: t('header.nav.skills') },
+    { id: 'education',  label: t('header.nav.education') },
+    { id: 'contact',    label: t('header.nav.contact') },
   ]
 
   return (
