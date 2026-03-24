@@ -1,10 +1,40 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import {
+  RadarChart, Radar, PolarGrid, PolarAngleAxis,
+  ResponsiveContainer, Tooltip
+} from 'recharts'
 import { CiDesktop, CiMobile1, CiSettings, CiDatabase, CiCloud, CiServer, CiGlobe, CiMonitor } from 'react-icons/ci'
+import { useTheme } from '../context/ThemeContext'
 import '../styles/Skills.css'
+
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="chart-tooltip">
+        <strong>{payload[0].payload.skill}</strong>
+        <span>{payload[0].value}%</span>
+      </div>
+    )
+  }
+  return null
+}
 
 const Skills = () => {
   const { t } = useTranslation()
+  const { theme } = useTheme()
+  const isDark = theme === 'dark'
+
+  const radarData = [
+    { skill: 'Frontend',    value: 82 },
+    { skill: 'Backend',     value: 85 },
+    { skill: 'Languages',   value: 79 },
+    { skill: 'Mobile',      value: 77 },
+    { skill: 'Databases',   value: 81 },
+    { skill: 'DevOps',      value: 80 },
+    { skill: 'AI & APIs',   value: 81 },
+    { skill: 'Agile',       value: 88 },
+  ]
 
   const skillCategories = [
     {
@@ -18,7 +48,7 @@ const Skills = () => {
         { name: 'TypeScript', level: 85 },
         { name: 'Ionic', level: 75 },
         { name: 'Bootstrap', level: 80 },
-        { name: 'Tauri', level: 70 }
+        { name: 'Tauri', level: 70 },
       ]
     },
     {
@@ -32,7 +62,7 @@ const Skills = () => {
         { name: 'Flask', level: 75 },
         { name: '.NET', level: 70 },
         { name: 'Socket.IO', level: 85 },
-        { name: 'Microservicios', level: 80 }
+        { name: 'Microservicios', level: 80 },
       ]
     },
     {
@@ -46,7 +76,7 @@ const Skills = () => {
         { name: 'Kotlin', level: 72 },
         { name: 'Java', level: 75 },
         { name: 'C#', level: 70 },
-        { name: 'C++', level: 75 }
+        { name: 'C++', level: 75 },
       ]
     },
     {
@@ -57,7 +87,7 @@ const Skills = () => {
         { name: 'Swift / iOS', level: 80 },
         { name: 'Android / Kotlin', level: 72 },
         { name: 'Xcode', level: 80 },
-        { name: 'Unity', level: 70 }
+        { name: 'Unity', level: 70 },
       ]
     },
     {
@@ -68,7 +98,7 @@ const Skills = () => {
         { name: 'PostgreSQL', level: 85 },
         { name: 'MongoDB', level: 80 },
         { name: 'SQL Server', level: 75 },
-        { name: 'Oracle', level: 75 }
+        { name: 'Oracle', level: 75 },
       ]
     },
     {
@@ -81,7 +111,7 @@ const Skills = () => {
         { name: 'Ubuntu Server', level: 90 },
         { name: 'Rocky Linux', level: 85 },
         { name: 'Debian', level: 80 },
-        { name: 'DevOps', level: 78 }
+        { name: 'DevOps', level: 78 },
       ]
     },
     {
@@ -93,7 +123,7 @@ const Skills = () => {
         { name: 'LangChain', level: 75 },
         { name: 'SAT / CFDI 4.0', level: 85 },
         { name: 'Stripe / OpenPay', level: 80 },
-        { name: 'Pandas / Matplotlib', level: 80 }
+        { name: 'Pandas / Matplotlib', level: 80 },
       ]
     },
     {
@@ -103,12 +133,14 @@ const Skills = () => {
         { name: 'Scrum', level: 90 },
         { name: 'Git / GitHub', level: 90 },
         { name: 'Asana', level: 85 },
-        { name: 'Diseño de BD', level: 85 }
+        { name: 'Diseño de BD', level: 85 },
       ]
     }
   ]
 
   const otherSkills = t('skills.other', { returnObjects: true })
+  const gridColor = isDark ? '#334155' : '#e2e8f0'
+  const textColor = isDark ? '#94a3b8' : '#64748b'
 
   return (
     <section id="skills" className="skills">
@@ -119,6 +151,50 @@ const Skills = () => {
           <p className="section-description">{t('skills.description')}</p>
         </div>
 
+        {/* Radar Chart */}
+        <div className="skills-chart-wrapper">
+          <div className="skills-chart-card">
+            <h3 className="skills-chart-title">Skills Overview</h3>
+            <ResponsiveContainer width="100%" height={360}>
+              <RadarChart data={radarData} margin={{ top: 10, right: 30, bottom: 10, left: 30 }}>
+                <PolarGrid stroke={gridColor} />
+                <PolarAngleAxis
+                  dataKey="skill"
+                  tick={{ fill: textColor, fontSize: 13, fontWeight: 600 }}
+                />
+                <Tooltip content={<CustomTooltip />} />
+                <Radar
+                  name="Level"
+                  dataKey="value"
+                  stroke="#2563eb"
+                  fill="#2563eb"
+                  fillOpacity={0.25}
+                  strokeWidth={2}
+                  dot={{ fill: '#2563eb', strokeWidth: 2, r: 4 }}
+                />
+              </RadarChart>
+            </ResponsiveContainer>
+          </div>
+
+          <div className="skills-radar-legend">
+            {radarData.map((item, i) => (
+              <div key={i} className="radar-legend-item">
+                <div className="radar-legend-bar-bg">
+                  <div
+                    className="radar-legend-bar-fill"
+                    style={{ width: `${item.value}%` }}
+                  ></div>
+                </div>
+                <div className="radar-legend-info">
+                  <span className="radar-legend-name">{item.skill}</span>
+                  <span className="radar-legend-val">{item.value}%</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Skill Cards */}
         <div className="skills-grid">
           {skillCategories.map((category, index) => (
             <div key={index} className="skill-category">
@@ -126,7 +202,6 @@ const Skills = () => {
                 <span className="category-icon">{category.icon}</span>
                 <h3 className="category-title">{t(category.titleKey)}</h3>
               </div>
-
               <div className="skills-list">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="skill-item">

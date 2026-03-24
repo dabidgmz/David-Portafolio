@@ -11,7 +11,16 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: false
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          i18n: ['i18next', 'react-i18next'],
+          charts: ['recharts']
+        }
+      }
+    }
   }
 })
 
