@@ -1,4 +1,11 @@
 {
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "openProjectDetails": "Open project details",
+    "closeDialog": "Close",
+    "previousProject": "Previous project",
+    "nextProject": "Next project"
+  },
   "header": {
     "nav": {
       "about": "About",
@@ -168,11 +175,15 @@
       "Server Administration",
       "Cybersecurity",
       "REST APIs & Webhooks",
+      "GraphQL APIs",
       "Database Design",
       "CFDI 4.0 Timbrado",
+      "BLE / IoT Sensors",
       "Embedded Systems",
       "Microservices Architecture",
       "RAG Pipelines",
+      "Streaming (SSE / WebSockets)",
+      "Game Dev (Unity 2D / 3D)",
       "Version Control",
       "Level Design",
       "PWA / Service Workers",
@@ -186,10 +197,19 @@
     "keyHighlights": "Highlights",
     "viewProject": "View Project",
     "viewCode": "View Code",
+    "showMore": "Show more",
+    "showLess": "Show less",
+    "viewDetails": "View details",
+    "techStack": "Tech stack",
+    "overview": "Overview",
+    "copied": "Copied to clipboard",
+    "copyEmail": "Copy email",
+    "copyPhone": "Copy phone",
     "filters": {
       "all": "All",
       "erp": "Web & ERP",
       "mobile": "Mobile & PWA",
+      "ai": "AI & Data",
       "games": "Game Dev",
       "hackathon": "Hackathon"
     },
@@ -213,6 +233,220 @@
         ],
         "link": "https://github.com/dabidgmz/ABASA-ERP-DASHBOARD",
         "linkType": "code"
+      },
+      {
+        "id": "whoknowsme",
+        "category": "mobile",
+        "title": "Who Knows Me Better?",
+        "period": "2025",
+        "role": "Full Stack PWA Developer",
+        "description": "Full-stack PWA to create personal quizzes and discover who knows you best. Players answer custom questions, the creator gets a live dashboard with score, time, country and global stats.",
+        "tags": ["Ionic React", "TypeScript", "Express", "SQLite", "PWA", "i18n"],
+        "highlights": [
+          "PWA with Ionic React + Vite + Service Workers",
+          "Express + better-sqlite3 backend with nanoid IDs",
+          "Dynamic scoring: time bonus + streak bonus + tiebreakers",
+          "Live admin dashboard: geo IP, score distribution, hardest questions",
+          "5 pre-built templates (couple, BFF, birthday, work, family)",
+          "Bearer-token admin auth with idempotent migrations",
+          "63 backend tests with Node test runner — zero extra deps",
+          "Web Share API + confetti on perfect scores, EN/ES i18n"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "pos-comida",
+        "category": "erp",
+        "title": "POS Comida — Restaurant Manager",
+        "period": "2025",
+        "role": "Full Stack Developer & Product Designer",
+        "description": "Private restaurant management platform with an Apple-inspired minimal interface. Real-time table layout, order pipeline, employee dashboards and admin analytics in a single unified system.",
+        "tags": ["Next.js", "TypeScript", "PostgreSQL", "Tailwind", "Stripe", "WebSockets"],
+        "highlights": [
+          "Minimalist Apple-style UI: glass surfaces, soft shadows, generous spacing",
+          "Real-time table & floor-plan management with status indicators",
+          "Order pipeline: kitchen, bar and waiter views synced via WebSockets",
+          "Employee dashboard with shifts, tips and per-role permissions",
+          "Admin analytics: revenue, top dishes, hourly heatmaps, ticket avg",
+          "Stripe checkout + split bills + printable tickets",
+          "Private deployment with role-based auth and audit log"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "flutter-sales",
+        "category": "mobile",
+        "title": "FieldSales — Flutter Cross-Platform App",
+        "period": "2025",
+        "role": "Flutter & Dart Developer",
+        "description": "Cross-platform sales app built with Flutter and Dart. Offline-first architecture for field reps with order capture, route planning and Bluetooth thermal printer integration.",
+        "tags": ["Flutter", "Dart", "Hive", "Riverpod", "Supabase", "BLE"],
+        "highlights": [
+          "Single Flutter codebase shipping iOS + Android + Web",
+          "Offline-first with Hive local DB and background sync",
+          "State management with Riverpod 2 + Freezed models",
+          "Bluetooth thermal printer integration for ticket printing",
+          "Supabase auth + realtime + storage for product images",
+          "Custom Material 3 theme aligned with brand guidelines"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "python-pipeline",
+        "category": "ai",
+        "title": "Fiscal Data Pipeline — Python ETL",
+        "period": "2025",
+        "role": "Backend & Data Engineer",
+        "description": "ETL platform for fiscal and accounting data. Ingests CFDI XML, normalizes records, runs Pandas analytics and exposes a FastAPI for downstream dashboards.",
+        "tags": ["Python", "FastAPI", "Pandas", "Celery", "Redis", "PostgreSQL"],
+        "highlights": [
+          "FastAPI backend with async endpoints and Pydantic schemas",
+          "Pandas + NumPy pipelines for fiscal aggregation and reconciliation",
+          "Celery + Redis scheduled jobs for nightly XML ingestion",
+          "Matplotlib / Plotly charts exported to the ERP frontend",
+          "Pytest suite with fixtures and parametrized cases",
+          "Docker Compose stack ready for production deploy"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "java-spring",
+        "category": "erp",
+        "title": "Inventory Service — Java & Spring Boot",
+        "period": "2024",
+        "role": "Backend Developer",
+        "description": "Enterprise inventory microservice in Java with Spring Boot 3. Layered architecture, JPA persistence, JWT auth and OpenAPI docs ready to plug into a service mesh.",
+        "tags": ["Java 17", "Spring Boot 3", "JPA", "PostgreSQL", "JWT", "Maven"],
+        "highlights": [
+          "Spring Boot 3 with hexagonal layering (controller / service / repo)",
+          "JPA + Hibernate models with PostgreSQL and Flyway migrations",
+          "JWT authentication with role-based access control",
+          "OpenAPI / Swagger UI auto-generated docs",
+          "JUnit 5 + Mockito test suite with >80% coverage",
+          "Dockerized for service-mesh deployment (Eureka-ready)"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "android-medvitrine",
+        "category": "mobile",
+        "title": "MedVitrine — Android Sensor Monitor",
+        "period": "2025",
+        "role": "Android Developer",
+        "description": "Native Android app built in Android Studio that reads IoT sensors inside a medicine display cabinet and keeps real-time control of environmental conditions — temperature, humidity, light and door state — to ensure pharmaceutical compliance.",
+        "tags": ["Android Studio", "Kotlin", "Java", "BLE", "Room", "MPAndroidChart"],
+        "highlights": [
+          "Native Android app developed in Android Studio (Kotlin + Java)",
+          "Reads temperature, humidity, light and door-state sensors via BLE / MQTT",
+          "Real-time live dashboard with MPAndroidChart line graphs",
+          "Out-of-range alerts with local push notifications and audible alarms",
+          "Room (SQLite) local persistence for offline history and audits",
+          "Per-medicine thresholds with regulatory-compliance presets",
+          "Material 3 UI with light/dark themes and adaptive layouts",
+          "CSV / PDF export of sensor logs for inspections"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "swift-health",
+        "category": "mobile",
+        "title": "PulseLog — Native Swift iOS App",
+        "period": "2025",
+        "role": "iOS Developer",
+        "description": "Native iOS app for health tracking. SwiftUI + Combine, HealthKit integration, CoreData persistence and a Watch companion for real-time heart-rate logging.",
+        "tags": ["Swift", "SwiftUI", "Combine", "HealthKit", "CoreData", "WatchOS"],
+        "highlights": [
+          "100% SwiftUI views with Combine for reactive data flows",
+          "HealthKit read/write for steps, heart rate and workouts",
+          "CoreData stack with iCloud sync via NSPersistentCloudKitContainer",
+          "Apple Watch companion app with complications",
+          "Animated charts using Swift Charts framework",
+          "Localized in EN/ES with adaptive layouts for iPad"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "web-platform",
+        "category": "erp",
+        "title": "Vendor Portal — Modern Web Platform",
+        "period": "2025",
+        "role": "Full Stack Web Developer",
+        "description": "Modern multi-tenant web platform for vendor onboarding and document compliance. React + Vite frontend, Node API and S3-compatible storage with audit-ready trails.",
+        "tags": ["React", "Vite", "TypeScript", "Tailwind", "Node.js", "S3"],
+        "highlights": [
+          "Multi-tenant React app with route-level code splitting",
+          "Tailwind design system with light/dark themes",
+          "Node.js + Express API with role-based middleware",
+          "S3-compatible document storage with virus scanning",
+          "Audit log for every contract / KYC document update",
+          "Lighthouse 95+ across performance, a11y and SEO"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "nest-microservices",
+        "category": "erp",
+        "title": "NestJS Microservices Platform",
+        "period": "2025",
+        "role": "Backend Architect",
+        "description": "Modular NestJS backend powering multiple ERP modules. GraphQL gateway, REST adapters, RabbitMQ messaging and TypeORM-backed PostgreSQL services.",
+        "tags": ["NestJS", "TypeScript", "GraphQL", "RabbitMQ", "TypeORM", "PostgreSQL"],
+        "highlights": [
+          "Modular NestJS architecture with shared libs (auth, logging)",
+          "GraphQL federation gateway for client-facing queries",
+          "REST adapters for legacy integrations",
+          "RabbitMQ event bus for cross-service messaging",
+          "TypeORM with migrations and multi-tenant connection routing",
+          "Jest + Supertest e2e test suite, CI on GitHub Actions"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "astro-site",
+        "category": "erp",
+        "title": "ABASA Marketing — Astro Site",
+        "period": "2025",
+        "role": "Frontend Developer",
+        "description": "High-performance marketing site built with Astro. Content collections for blog and case studies, View Transitions, MDX components and zero-JS by default.",
+        "tags": ["Astro", "MDX", "TypeScript", "Tailwind", "View Transitions", "Sanity"],
+        "highlights": [
+          "Astro with islands architecture — zero JS on static pages",
+          "Content collections + MDX for blog, case studies and docs",
+          "View Transitions API for native-like page navigation",
+          "Sanity CMS integration for non-technical content updates",
+          "Image optimization with Astro Assets + AVIF/WebP",
+          "Lighthouse 100 on performance, a11y, best practices, SEO"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "ai-assistant",
+        "category": "ai",
+        "title": "DocuMind — AI Document Assistant",
+        "period": "2025",
+        "role": "AI Engineer",
+        "description": "Production RAG assistant for fiscal and legal documents. Claude AI orchestrates retrieval, citations and structured outputs with streaming responses and cost tracking.",
+        "tags": ["Claude AI", "LangChain", "pgvector", "FastAPI", "OpenAI", "Streaming"],
+        "highlights": [
+          "RAG pipeline over fiscal / legal repositories with pgvector",
+          "Claude AI + OpenAI multi-provider with model fallback",
+          "Streaming responses via SSE with citation markers",
+          "Tool-calling agents for invoice lookup and SAT validations",
+          "Token + cost tracking per tenant with budget alerts",
+          "Eval harness with golden Q&A datasets and regression checks"
+        ],
+        "link": null,
+        "linkType": null
       },
       {
         "id": "smarttrack",
@@ -342,6 +576,47 @@
           "Heart-based health system + life-timer",
           "Enemy AI and platform challenges",
           "Focus on level design and game feel"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "escape-room-3d",
+        "category": "games",
+        "title": "Escape Room 3D",
+        "period": "2025",
+        "role": "3D Game Developer",
+        "description": "First-person 3D escape room built in Unity. Players solve interactive puzzles, manipulate objects and uncover hidden mechanisms to find the exit before time runs out.",
+        "tags": ["Unity", "C#", "3D", "URP", "Animation", "Cinemachine"],
+        "highlights": [
+          "First-person 3D escape room with full Unity URP rendering",
+          "Interactive puzzles: keys, locks, hidden switches and combinations",
+          "Smooth animated objects with Animator state machines",
+          "Cinemachine cameras for cutscenes and dramatic reveals",
+          "Dynamic lighting and baked GI for atmospheric mood",
+          "Inventory system + raycast-based object pickup and inspection",
+          "Spatial audio with FMOD-style ambient soundscape"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "space-war-2d",
+        "category": "games",
+        "title": "Space War — 2D Shooter",
+        "period": "2025",
+        "role": "Game Developer",
+        "description": "Classic 2D space shooter built in Unity. Pilot a ship dodging meteors and destroying alien enemies across waves of increasing difficulty with power-ups and boss fights.",
+        "tags": ["Unity", "C#", "2D", "Particle FX", "Object Pooling", "Audio"],
+        "highlights": [
+          "Unity 2D space shooter with C# scripting",
+          "Wave-based enemy AI with multiple ship types and patterns",
+          "Procedural meteor field with physics-based collisions",
+          "Object pooling for bullets and explosions — buttery 60fps",
+          "Power-ups: shields, multi-shot, speed boost and bombs",
+          "Particle FX for thrusters, explosions and weapon trails",
+          "Boss fights with multi-stage attack patterns",
+          "Score, combo system and persistent high-score table"
         ],
         "link": null,
         "linkType": null

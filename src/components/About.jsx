@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { UserIcon, MonitorIcon, BrainIcon, DatabaseIcon } from '../Icons'
+import {
+  UserIcon, MonitorIcon, BrainIcon, DatabaseIcon,
+  RocketIcon, ZapIcon, CalendarIcon, NetworkIcon
+} from '../Icons'
+import Reveal from './Reveal'
 import '../styles/About.css'
 
 const AnimatedCounter = ({ end, suffix = '+', duration = 1800 }) => {
@@ -37,10 +41,10 @@ const About = () => {
   const { t } = useTranslation()
 
   const stats = [
-    { number: 8,  suffix: '+', labelKey: 'about.stats.projects',     icon: '🚀', color: '#2563eb' },
-    { number: 30, suffix: '+', labelKey: 'about.stats.technologies',  icon: '⚡', color: '#0ea5e9' },
-    { number: 2,  suffix: '+', labelKey: 'about.stats.experience',    icon: '📅', color: '#6366f1' },
-    { number: 5,  suffix: '+', labelKey: 'about.stats.microservices', icon: '🔧', color: '#8b5cf6' },
+    { number: 8,  suffix: '+', labelKey: 'about.stats.projects',     icon: <RocketIcon size={22} />,   color: '#2563eb' },
+    { number: 30, suffix: '+', labelKey: 'about.stats.technologies',  icon: <ZapIcon size={22} />,      color: '#0ea5e9' },
+    { number: 2,  suffix: '+', labelKey: 'about.stats.experience',    icon: <CalendarIcon size={22} />, color: '#6366f1' },
+    { number: 5,  suffix: '+', labelKey: 'about.stats.microservices', icon: <NetworkIcon size={22} />,  color: '#8b5cf6' },
   ]
 
   const highlights = [
@@ -53,11 +57,11 @@ const About = () => {
   return (
     <section id="about" className="about">
       <div className="container">
-        <div className="section-header">
+        <Reveal as="div" className="section-header">
           <span className="section-tag">{t('about.tag')}</span>
           <h2 className="section-title">{t('about.title')}</h2>
           <p className="section-description">{t('about.description')}</p>
-        </div>
+        </Reveal>
 
         <div className="about-content">
           <div className="about-text">

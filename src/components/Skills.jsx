@@ -6,6 +6,7 @@ import {
 } from 'recharts'
 import { CiDesktop, CiMobile1, CiSettings, CiDatabase, CiCloud, CiServer, CiGlobe, CiMonitor } from 'react-icons/ci'
 import { useTheme } from '../context/ThemeContext'
+import Reveal from './Reveal'
 import '../styles/Skills.css'
 
 const CustomTooltip = ({ active, payload }) => {
@@ -42,11 +43,13 @@ const Skills = () => {
       icon: <CiMonitor />,
       skills: [
         { name: 'React', level: 90 },
-        { name: 'Next.js', level: 80 },
+        { name: 'Next.js', level: 82 },
         { name: 'Astro', level: 85 },
         { name: 'Angular', level: 75 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'Ionic', level: 75 },
+        { name: 'TypeScript', level: 88 },
+        { name: 'Vite', level: 85 },
+        { name: 'Tailwind CSS', level: 85 },
+        { name: 'Ionic React', level: 80 },
         { name: 'Bootstrap', level: 80 },
         { name: 'Tauri', level: 70 },
       ]
@@ -57,25 +60,31 @@ const Skills = () => {
       skills: [
         { name: 'Laravel', level: 90 },
         { name: 'AdonisJS', level: 90 },
-        { name: 'Node.js', level: 85 },
+        { name: 'Node.js', level: 88 },
+        { name: 'NestJS', level: 82 },
+        { name: 'Express', level: 88 },
         { name: 'Django', level: 80 },
         { name: 'Flask', level: 75 },
+        { name: 'FastAPI', level: 80 },
+        { name: 'Spring Boot', level: 75 },
         { name: '.NET', level: 70 },
         { name: 'Socket.IO', level: 85 },
-        { name: 'Microservicios', level: 80 },
+        { name: 'Microservicios', level: 82 },
       ]
     },
     {
       titleKey: 'skills.categories.languages',
       icon: <CiDesktop />,
       skills: [
-        { name: 'JavaScript', level: 90 },
+        { name: 'JavaScript', level: 92 },
+        { name: 'TypeScript', level: 88 },
         { name: 'PHP', level: 85 },
         { name: 'Python', level: 85 },
         { name: 'Swift', level: 80 },
-        { name: 'Kotlin', level: 72 },
-        { name: 'Java', level: 75 },
-        { name: 'C#', level: 70 },
+        { name: 'Dart', level: 78 },
+        { name: 'Kotlin', level: 74 },
+        { name: 'Java', level: 78 },
+        { name: 'C#', level: 72 },
         { name: 'C++', level: 75 },
       ]
     },
@@ -83,44 +92,55 @@ const Skills = () => {
       titleKey: 'skills.categories.mobile',
       icon: <CiMobile1 />,
       skills: [
+        { name: 'Flutter', level: 80 },
         { name: 'React Native', level: 85 },
-        { name: 'Swift / iOS', level: 80 },
-        { name: 'Android / Kotlin', level: 72 },
+        { name: 'Ionic React (PWA)', level: 82 },
+        { name: 'Swift / SwiftUI', level: 80 },
+        { name: 'Android Studio (Kotlin)', level: 76 },
         { name: 'Xcode', level: 80 },
-        { name: 'Unity', level: 70 },
+        { name: 'Unity 2D', level: 78 },
+        { name: 'Unity 3D / URP', level: 72 },
       ]
     },
     {
       titleKey: 'skills.categories.databases',
       icon: <CiDatabase />,
       skills: [
-        { name: 'MySQL', level: 90 },
-        { name: 'PostgreSQL', level: 85 },
+        { name: 'PostgreSQL', level: 88 },
+        { name: 'MySQL / MariaDB', level: 90 },
+        { name: 'SQLite', level: 88 },
         { name: 'MongoDB', level: 80 },
+        { name: 'Redis', level: 78 },
+        { name: 'pgvector', level: 75 },
+        { name: 'Supabase', level: 78 },
         { name: 'SQL Server', level: 75 },
-        { name: 'Oracle', level: 75 },
+        { name: 'Oracle', level: 72 },
       ]
     },
     {
       titleKey: 'skills.categories.servers',
       icon: <CiCloud />,
       skills: [
-        { name: 'Docker', level: 80 },
-        { name: 'AWS', level: 72 },
-        { name: 'DigitalOcean', level: 80 },
+        { name: 'Docker', level: 84 },
+        { name: 'Vercel', level: 85 },
+        { name: 'AWS', level: 74 },
+        { name: 'DigitalOcean', level: 82 },
+        { name: 'Nginx / PM2', level: 85 },
+        { name: 'GitHub Actions', level: 80 },
         { name: 'Ubuntu Server', level: 90 },
         { name: 'Rocky Linux', level: 85 },
         { name: 'Debian', level: 80 },
-        { name: 'DevOps', level: 78 },
       ]
     },
     {
       titleKey: 'skills.categories.ai',
       icon: <CiGlobe />,
       skills: [
-        { name: 'Claude AI', level: 85 },
-        { name: 'OpenAI / GPT-4', level: 82 },
-        { name: 'LangChain', level: 75 },
+        { name: 'Claude AI', level: 88 },
+        { name: 'OpenAI / GPT-4', level: 85 },
+        { name: 'LangChain', level: 78 },
+        { name: 'RAG / Vector Stores', level: 82 },
+        { name: 'Streaming (SSE)', level: 80 },
         { name: 'SAT / CFDI 4.0', level: 85 },
         { name: 'Stripe / OpenPay', level: 80 },
         { name: 'Pandas / Matplotlib', level: 80 },
@@ -131,9 +151,11 @@ const Skills = () => {
       icon: <CiServer />,
       skills: [
         { name: 'Scrum', level: 90 },
-        { name: 'Git / GitHub', level: 90 },
-        { name: 'Asana', level: 85 },
-        { name: 'Diseño de BD', level: 85 },
+        { name: 'Git / GitHub', level: 92 },
+        { name: 'Asana / Linear', level: 85 },
+        { name: 'Database Design', level: 85 },
+        { name: 'Testing (Jest/Pytest)', level: 80 },
+        { name: 'CI/CD', level: 80 },
       ]
     }
   ]
@@ -145,11 +167,11 @@ const Skills = () => {
   return (
     <section id="skills" className="skills">
       <div className="container">
-        <div className="section-header">
+        <Reveal as="div" className="section-header">
           <span className="section-tag">{t('skills.tag')}</span>
           <h2 className="section-title">{t('skills.title')}</h2>
           <p className="section-description">{t('skills.description')}</p>
-        </div>
+        </Reveal>
 
         {/* Radar Chart */}
         <div className="skills-chart-wrapper">

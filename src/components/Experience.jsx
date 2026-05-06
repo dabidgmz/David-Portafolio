@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import Reveal from './Reveal'
 import '../styles/Experience.css'
 
 const BriefcaseIcon = () => (
@@ -96,11 +97,11 @@ const Experience = () => {
   return (
     <section id="experience" className="experience">
       <div className="container">
-        <div className="section-header">
+        <Reveal as="div" className="section-header">
           <span className="section-tag">{t('experience.tag')}</span>
           <h2 className="section-title">{t('experience.title')}</h2>
           <p className="section-description">{t('experience.description')}</p>
-        </div>
+        </Reveal>
 
         <div className="experience-layout">
           <div className="experience-timeline">

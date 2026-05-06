@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { UserIcon, SettingsIcon, MonitorIcon, ToolsIcon, GlobeIcon, DatabaseIcon, GraduationIcon, CheckIcon } from '../Icons'
+import Reveal from './Reveal'
 import '../styles/Education.css'
 
 const Education = () => {
@@ -10,11 +11,11 @@ const Education = () => {
   return (
     <section id="education" className="education">
       <div className="container">
-        <div className="section-header">
+        <Reveal as="div" className="section-header">
           <span className="section-tag">{t('education.tag')}</span>
           <h2 className="section-title">{t('education.title')}</h2>
           <p className="section-description">{t('education.description')}</p>
-        </div>
+        </Reveal>
 
         <div className="education-content">
           <div className="education-card">

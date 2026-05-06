@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   GitHubIcon, LinkedInIcon, ServerIcon, MobileIcon,
@@ -8,6 +8,7 @@ import '../styles/Hero.css'
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false)
+  const sectionRef = useRef(null)
   const { t } = useTranslation()
 
   useEffect(() => {
@@ -15,10 +16,26 @@ const Hero = () => {
     return () => cancelAnimationFrame(id)
   }, [])
 
+  // Spotlight cursor — track mouse via CSS variables (no React re-renders)
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    if (window.matchMedia('(hover: none)').matches) return
+
+    const handleMove = (e) => {
+      const rect = el.getBoundingClientRect()
+      el.style.setProperty('--mx', `${e.clientX - rect.left}px`)
+      el.style.setProperty('--my', `${e.clientY - rect.top}px`)
+    }
+    el.addEventListener('mousemove', handleMove)
+    return () => el.removeEventListener('mousemove', handleMove)
+  }, [])
+
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
   return (
-    <section id="hero" className={`hero ${isVisible ? 'visible' : ''}`}>
+    <section id="hero" ref={sectionRef} className={`hero hero--spotlight ${isVisible ? 'visible' : ''}`}>
       <div className="hero-container container">
         <div className="hero-content">
           <div className="hero-badge">
