@@ -498,11 +498,23 @@
 }
 
 @media (max-width: 640px) {
-  .projects-filters {
+  /* Make the wrap scroll horizontally with a fade hint at edges */
+  .projects-filters-wrap {
     width: 100%;
     overflow-x: auto;
-    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 16px;
+    margin: 0 -16px 36px;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+    scrollbar-width: none;
+  }
+  .projects-filters-wrap::-webkit-scrollbar { display: none; }
+
+  .projects-filters {
+    width: max-content;
     flex-wrap: nowrap;
+    overflow: visible;
   }
 
   .filter-btn {

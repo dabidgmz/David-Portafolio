@@ -226,4 +226,17 @@
   .gh-card { padding: 20px 18px; }
 
   .gh-stat-num { font-size: 28px; }
+
+  .gh-langs { padding: 18px 18px; }
+
+  .gh-langs-list {
+    grid-template-columns: 1fr;
+    gap: 8px 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .gh-card { padding: 16px 14px; }
+  .gh-stat-num { font-size: 24px; }
+  .gh-stat-label { font-size: 12px; }
 }

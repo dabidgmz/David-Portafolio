@@ -328,6 +328,7 @@
 
   .project-modal {
     max-height: 92vh;
+    max-height: 92dvh;
     border-radius: 22px 22px 0 0;
     animation: modal-in-mobile 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
   }
@@ -343,16 +344,30 @@
     }
   }
 
+  /* Drag-handle visual cue for sheet feel */
+  .project-modal::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 36px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border-soft);
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
   .project-modal-header {
-    padding: 16px 20px;
+    padding: 18px 20px 14px;
   }
 
   .project-modal-body {
-    padding: 22px 20px 20px;
+    padding: 16px 20px 20px;
   }
 
   .project-modal-footer {
-    padding: 12px 16px;
+    padding: 12px 16px calc(12px + var(--safe-bottom));
   }
 
   .project-modal-nav span:not(.project-modal-nav-arrow) {
@@ -361,5 +376,8 @@
 
   .project-modal-nav {
     padding: 8px 12px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
   }
 }

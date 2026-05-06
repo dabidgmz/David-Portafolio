@@ -1,11 +1,13 @@
 /* ===== Apple-inspired Hero ===== */
 .hero {
   min-height: 100vh;
+  min-height: 100dvh;          /* dynamic viewport — handles iOS browser chrome correctly */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-top: 80px;
+  padding-top: calc(var(--header-h) + 16px);
+  padding-bottom: 60px;
   background: var(--white);
   overflow: hidden;
 }
@@ -186,6 +188,8 @@
     transparent 80%
   );
   border-radius: 0 14px 14px 0;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 [data-theme="dark"] .hero-quote {
@@ -231,6 +235,24 @@
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-quote {
+    padding: 14px 16px 14px 18px;
+    margin-bottom: 24px;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .hero-quote blockquote {
+    font-size: 15.5px;
+    line-height: 1.4;
+  }
+
+  .hero-quote-mark {
+    font-size: 22px;
+    vertical-align: -4px;
   }
 }
 
@@ -518,4 +540,23 @@
   .hero-image-wrapper {
     max-width: 280px;
   }
+}
+
+@media (max-width: 360px) {
+  .hero-photo-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-image-bg {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-image-wrapper {
+    max-width: 220px;
+  }
+
+  /* Hide floating cards on tiny screens — they overlap the photo */
+  .floating-card { display: none; }
 }

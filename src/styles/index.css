@@ -62,6 +62,15 @@
   --radius-lg: 22px;
   --radius-xl: 28px;
   --radius-pill: 999px;
+
+  /* Header height — used by scroll-margin-top so anchors don't go under the nav */
+  --header-h: 64px;
+
+  /* iOS safe-area helpers (notch / home bar) */
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left:   env(safe-area-inset-left, 0px);
+  --safe-right:  env(safe-area-inset-right, 0px);
 }
 
 /* ===== DARK MODE — true Apple dark ===== */
@@ -108,6 +117,10 @@
 
 html {
   scroll-behavior: smooth;
+  /* Avoid iOS rubber-band horizontal scroll */
+  overflow-x: hidden;
+  /* Anchors land below the fixed header */
+  scroll-padding-top: calc(var(--header-h) + 12px);
 }
 
 body {
@@ -117,17 +130,29 @@ body {
   line-height: 1.5;
   letter-spacing: -0.01em;
   overflow-x: hidden;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;       /* iOS landscape font bump */
+  text-size-adjust: 100%;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Sections — make sure clicking nav scrolls to a position that respects the header */
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + 16px);
 }
 
 /* Utilidades */
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 max(24px, var(--safe-left)) 0 max(24px, var(--safe-right));
+}
+
+@media (max-width: 480px) {
+  .container { padding-left: max(16px, var(--safe-left)); padding-right: max(16px, var(--safe-right)); }
 }
 
 /* Secciones */
@@ -285,6 +310,7 @@ h1, h2, h3 {
 @media (max-width: 768px) {
   :root {
     --section-padding: 80px;
+    --header-h: 56px;
   }
 
   .section-header {
@@ -304,6 +330,25 @@ h1, h2, h3 {
 @media (max-width: 480px) {
   :root {
     --section-padding: 64px;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --section-padding: 52px;
+  }
+
+  .section-tag {
+    padding: 5px 12px;
+    font-size: 11px;
   }
 }
 

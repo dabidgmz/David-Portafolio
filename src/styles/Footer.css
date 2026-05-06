@@ -2,7 +2,7 @@
 .footer {
   background: var(--off-white);
   color: var(--text-dark);
-  padding: 64px 0 32px;
+  padding: 64px 0 calc(32px + var(--safe-bottom));
   margin-top: 0;
   border-top: 1px solid var(--border-subtle);
 }

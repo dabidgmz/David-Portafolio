@@ -23,7 +23,12 @@ const ProjectModal = ({
 
   useEffect(() => {
     prevFocus.current = document.activeElement
+    // Lock body scroll — iOS-safe (preserves position when modal closes)
+    const scrollY = window.scrollY
     document.body.style.overflow = 'hidden'
+    document.body.style.position = 'fixed'
+    document.body.style.top = `-${scrollY}px`
+    document.body.style.width = '100%'
     closeRef.current?.focus({ preventScroll: true })
 
     const handleKey = (e) => {
@@ -60,7 +65,15 @@ const ProjectModal = ({
     window.addEventListener('keydown', handleKey)
     return () => {
       window.removeEventListener('keydown', handleKey)
+      // Restore scroll position
+      const top = document.body.style.top
       document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      if (top) {
+        window.scrollTo(0, parseInt(top || '0', 10) * -1)
+      }
       prevFocus.current?.focus?.()
     }
   }, [hasPrev, hasNext, onClose, onPrev, onNext])

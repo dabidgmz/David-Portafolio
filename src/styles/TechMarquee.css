@@ -37,8 +37,31 @@
   animation: tech-scroll 48s linear infinite;
 }
 
-.tech-marquee:hover .tech-marquee-track {
+.tech-marquee:hover .tech-marquee-track,
+.tech-marquee:focus-within .tech-marquee-track {
   animation-play-state: paused;
+}
+
+@media (max-width: 640px) {
+  .tech-marquee {
+    padding: 22px 0 24px;
+  }
+
+  .tech-marquee-track {
+    gap: 24px;
+    animation-duration: 60s;     /* slower on phones — easier to read */
+  }
+
+  .tech-marquee-item {
+    padding: 5px 12px;
+    font-size: 12.5px;
+    gap: 8px;
+  }
+
+  .tech-marquee-item img {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 @keyframes tech-scroll {
