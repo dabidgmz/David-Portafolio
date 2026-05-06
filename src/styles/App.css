@@ -13,6 +13,11 @@ main {
   animation: fadeIn 0.6s ease-out;
 }
 
+/* Lazy-load fallback — keeps layout calm during chunk fetch */
+.lazy-fallback {
+  min-height: 60vh;
+}
+
 /* Smooth transitions entre secciones */
 section {
   position: relative;

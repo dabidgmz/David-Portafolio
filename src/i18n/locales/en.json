@@ -14,7 +14,49 @@
       "skills": "Skills",
       "education": "Education",
       "contact": "Contact"
-    }
+    },
+    "downloadCv": "Download CV",
+    "scrollToTop": "Back to top"
+  },
+  "process": {
+    "tag": "How I work",
+    "title": "From idea to production",
+    "description": "A clear, repeatable engineering process that ships on time and stays maintainable.",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Discovery",
+        "desc": "I align on the real problem, the constraints, and the success metrics before writing any code."
+      },
+      {
+        "n": "02",
+        "title": "Architecture",
+        "desc": "I propose 1–2 viable approaches with tradeoffs, pick the simplest one that fits, and document the contract."
+      },
+      {
+        "n": "03",
+        "title": "Build",
+        "desc": "Iterative delivery in short cycles — small PRs, tested behavior, reviewable code. No big-bang releases."
+      },
+      {
+        "n": "04",
+        "title": "Ship & Learn",
+        "desc": "Production deploy with monitoring, error tracking and feedback loops. We measure, then we iterate."
+      }
+    ]
+  },
+  "marquee": {
+    "label": "Working with"
+  },
+  "github": {
+    "tag": "Activity",
+    "title": "GitHub footprint",
+    "description": "Shipping in production — stats from real repositories.",
+    "viewProfile": "View on GitHub"
+  },
+  "stickyCta": {
+    "label": "Hire me",
+    "whatsapp": "WhatsApp"
   },
   "hero": {
     "badge": "Available for projects",

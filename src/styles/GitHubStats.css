@@ -1,0 +1,62 @@
+/* ===== GitHub Stats — neutral cards ===== */
+.github-stats {
+  background: var(--off-white);
+}
+
+.github-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-auto-rows: auto;
+  gap: 18px;
+}
+
+.github-card {
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.github-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-soft);
+}
+
+.github-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.github-card--stats {
+  grid-row: span 1;
+}
+
+.github-card--streak {
+  grid-column: 1 / -1;
+}
+
+.github-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.github-cta .btn {
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .github-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .github-card--streak {
+    grid-column: 1;
+  }
+}

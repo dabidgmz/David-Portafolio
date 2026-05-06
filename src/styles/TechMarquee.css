@@ -1,0 +1,84 @@
+/* ===== Tech marquee — infinite scroll of logos ===== */
+.tech-marquee {
+  position: relative;
+  padding: 28px 0;
+  background: var(--off-white);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.tech-marquee-label {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--dark-gray);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.tech-marquee-mask {
+  position: relative;
+  overflow: hidden;
+  margin-top: 16px;
+  /* Fade edges so logos blend in */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+
+.tech-marquee-track {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  width: max-content;
+  animation: tech-scroll 48s linear infinite;
+}
+
+.tech-marquee:hover .tech-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes tech-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }    /* exactly half because we duplicated the items */
+}
+
+.tech-marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-dark);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tech-marquee-item img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-marquee-track {
+    animation: none;
+    transform: translateX(0);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tech-marquee-mask {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}

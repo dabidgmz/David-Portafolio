@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useTheme } from '../context/ThemeContext'
+import { useActiveSection } from '../hooks/useActiveSection'
 import { SunIcon, MoonIcon, MenuIcon, CloseIcon } from '../Icons'
 import '../styles/Header.css'
+
+const NAV_IDS = ['about', 'experience', 'projects', 'process', 'skills', 'github', 'education', 'contact']
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -10,6 +13,7 @@ const Header = () => {
   const [scrollProgress, setScrollProgress] = useState(0)
   const { t, i18n } = useTranslation()
   const { theme, toggleTheme } = useTheme()
+  const active = useActiveSection(NAV_IDS)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,15 +56,29 @@ const Header = () => {
         </button>
 
         <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`} role="navigation">
-          {navLinks.map(link => (
-            <button
-              key={link.id}
-              onClick={() => scrollToSection(link.id)}
-              className="nav-link"
-            >
-              {link.label}
-            </button>
-          ))}
+          {navLinks.map(link => {
+            const isActive = active === link.id
+            return (
+              <button
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className={`nav-link ${isActive ? 'nav-link--active' : ''}`}
+                aria-current={isActive ? 'true' : undefined}
+              >
+                {link.label}
+              </button>
+            )
+          })}
+
+          <a
+            href="/David_Herrera_CV.pdf"
+            download
+            className="nav-link nav-cv"
+            aria-label={t('header.downloadCv')}
+          >
+            <span className="nav-cv-icon" aria-hidden="true">↓</span>
+            CV
+          </a>
 
           <div className="header-controls">
             <button

@@ -32,6 +32,38 @@ const Hero = () => {
     return () => el.removeEventListener('mousemove', handleMove)
   }, [])
 
+  // Magnetic hover — subtle pull toward cursor on .btn-magnetic elements
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    if (window.matchMedia('(hover: none)').matches) return
+
+    const buttons = sectionRef.current?.querySelectorAll('.btn-magnetic')
+    if (!buttons?.length) return
+
+    const STRENGTH = 0.25       // 0-1, how much it follows the cursor
+    const handlers = []
+
+    buttons.forEach((btn) => {
+      const onMove = (e) => {
+        const rect = btn.getBoundingClientRect()
+        const x = e.clientX - rect.left - rect.width / 2
+        const y = e.clientY - rect.top - rect.height / 2
+        btn.style.transform = `translate(${x * STRENGTH}px, ${y * STRENGTH}px)`
+      }
+      const onLeave = () => { btn.style.transform = '' }
+      btn.addEventListener('mousemove', onMove)
+      btn.addEventListener('mouseleave', onLeave)
+      handlers.push([btn, onMove, onLeave])
+    })
+
+    return () => {
+      handlers.forEach(([btn, onMove, onLeave]) => {
+        btn.removeEventListener('mousemove', onMove)
+        btn.removeEventListener('mouseleave', onLeave)
+      })
+    }
+  }, [])
+
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
   return (
@@ -60,12 +92,17 @@ const Hero = () => {
           </figure>
 
           <div className="hero-cta">
-            <button className="btn btn-primary" onClick={() => scrollTo('projects')}>
+            <button className="btn btn-primary btn-magnetic" onClick={() => scrollTo('projects')}>
               {t('hero.viewProjects')}
             </button>
-            <button className="btn btn-secondary" onClick={() => scrollTo('contact')}>
-              {t('hero.contactMe')}
-            </button>
+            <a
+              href="/David_Herrera_CV.pdf"
+              download
+              className="btn btn-secondary btn-magnetic"
+            >
+              <span className="btn-icon" aria-hidden="true">↓</span>
+              {t('header.downloadCv')}
+            </a>
           </div>
 
           <div className="hero-social">

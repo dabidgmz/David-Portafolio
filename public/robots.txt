@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://david-portafolio-t1av.vercel.app/sitemap.xml

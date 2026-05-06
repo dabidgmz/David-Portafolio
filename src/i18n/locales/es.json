@@ -14,7 +14,49 @@
       "skills": "Habilidades",
       "education": "Educación",
       "contact": "Contacto"
-    }
+    },
+    "downloadCv": "Descargar CV",
+    "scrollToTop": "Volver arriba"
+  },
+  "process": {
+    "tag": "Cómo trabajo",
+    "title": "De la idea a producción",
+    "description": "Un proceso de ingeniería claro y repetible que entrega a tiempo y se mantiene sostenible.",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Descubrimiento",
+        "desc": "Alineo el problema real, las restricciones y las métricas de éxito antes de escribir una línea de código."
+      },
+      {
+        "n": "02",
+        "title": "Arquitectura",
+        "desc": "Propongo 1–2 caminos viables con sus tradeoffs, elijo el más simple que encaje y documento el contrato."
+      },
+      {
+        "n": "03",
+        "title": "Construcción",
+        "desc": "Entrega iterativa en ciclos cortos — PRs pequeños, comportamiento probado, código revisable. Cero lanzamientos big-bang."
+      },
+      {
+        "n": "04",
+        "title": "Deploy y aprendizaje",
+        "desc": "Despliegue a producción con monitoreo, tracking de errores y loops de feedback. Medimos y después iteramos."
+      }
+    ]
+  },
+  "marquee": {
+    "label": "Trabajo con"
+  },
+  "github": {
+    "tag": "Actividad",
+    "title": "Footprint en GitHub",
+    "description": "Enviando a producción — stats desde repositorios reales.",
+    "viewProfile": "Ver en GitHub"
+  },
+  "stickyCta": {
+    "label": "Contrátame",
+    "whatsapp": "WhatsApp"
   },
   "hero": {
     "badge": "Disponible para proyectos",
