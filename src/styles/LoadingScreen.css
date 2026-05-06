@@ -1,12 +1,14 @@
+/* ===== Apple-inspired Loading Screen ===== */
+
 .loading-screen {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: #0f172a;
+  background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: opacity 480ms var(--ease-out), visibility 480ms var(--ease-out);
 }
 
 .loading-fade-out {
@@ -18,37 +20,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  animation: loadingAppear 0.5s ease-out;
+  gap: 22px;
+  animation: loadingAppear 600ms var(--ease-out);
 }
 
 @keyframes loadingAppear {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
+/* Mark — small neutral square with the initial */
 .loading-logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--light-gray);
+  border: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 40px rgba(37, 99, 235, 0.5);
-  animation: logoPulse 1.5s ease-in-out infinite;
-}
-
-@keyframes logoPulse {
-  0%, 100% { box-shadow: 0 0 40px rgba(37, 99, 235, 0.5); }
-  50%       { box-shadow: 0 0 60px rgba(37, 99, 235, 0.8), 0 0 100px rgba(14, 165, 233, 0.3); }
 }
 
 .loading-initial {
-  font-size: 40px;
-  font-weight: 900;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.04em;
   line-height: 1;
 }
 
@@ -60,44 +58,57 @@
 }
 
 .loading-name {
-  font-size: 28px;
-  font-weight: 800;
-  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: -0.5px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-dark);
+  letter-spacing: -0.025em;
+  background: none;
+  -webkit-text-fill-color: currentColor;
 }
 
 .loading-role {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
-  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  color: var(--dark-gray);
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.005em;
 }
 
+/* Hairline progress */
 .loading-bar-track {
-  width: 240px;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.1);
+  width: 200px;
+  height: 2px;
+  background: var(--light-gray);
   border-radius: 99px;
   overflow: hidden;
+  margin-top: 10px;
 }
 
 .loading-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #2563eb, #0ea5e9);
+  background: var(--text-dark);
   border-radius: 99px;
   transition: width 0.05s linear;
-  box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+}
+
+[data-theme="dark"] .loading-bar-fill {
+  background: #f5f5f7;
 }
 
 .loading-percent {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.35);
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-size: 11px;
+  color: var(--dark-gray);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-screen,
+  .loading-content,
+  .loading-bar-fill {
+    animation: none;
+    transition: none;
+  }
 }
