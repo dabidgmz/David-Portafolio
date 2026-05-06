@@ -21,6 +21,8 @@
     "title": "Hello, I'm",
     "subtitle": "Full Stack Developer · AI Integrations · ERP Systems",
     "description": "Building enterprise ERP platforms with AI-assisted workflows, fiscal API integrations (SAT/CFDI), and scalable backend architectures. Scrum Master & team leader.",
+    "quote": "The sky isn't the limit — it's just the beginning.",
+    "quoteAuthor": "David Herrera",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me",
     "scroll": "Scroll",
@@ -425,6 +427,47 @@
           "Sanity CMS integration for non-technical content updates",
           "Image optimization with Astro Assets + AVIF/WebP",
           "Lighthouse 100 on performance, a11y, best practices, SEO"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "gemini-chatbot",
+        "category": "ai",
+        "title": "Gemini Chatbot — Conversational Assistant",
+        "period": "2025",
+        "role": "AI Engineer",
+        "description": "Production chatbot powered by Google Gemini. Multi-turn conversational memory, function calling for live data lookups, and a streaming UI with markdown + code highlighting.",
+        "tags": ["Gemini AI", "Node.js", "TypeScript", "Function Calling", "Streaming", "React"],
+        "highlights": [
+          "Google Gemini Pro / Flash with multi-turn conversation memory",
+          "Function calling for live data: orders, inventory, FAQ lookup",
+          "Streaming responses (SSE) with markdown + code-block highlighting",
+          "Per-tenant prompt templates and tone controls",
+          "Token tracking and cost dashboard per conversation",
+          "Rate limiting and abuse prevention with Redis",
+          "Embeddable widget for any web product (drop-in script)"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "optica-pos",
+        "category": "erp",
+        "title": "Ópticos POS — Optical Shop Manager",
+        "period": "2024",
+        "role": "Full Stack Developer",
+        "description": "Native PHP system (OOP) for an optical shop. Manages product catalog, layaway/holds, appointment scheduling, and digital prescriptions — all from a single Bootstrap dashboard.",
+        "tags": ["PHP (Native)", "OOP", "MySQL", "Bootstrap", "JavaScript", "Web"],
+        "highlights": [
+          "Native PHP with strict OOP (models, controllers, services, repositories)",
+          "Product catalog: frames, lenses, contacts with stock and pricing",
+          "Layaway / hold system with deposits and expiration policies",
+          "Appointment scheduling with calendar view and reminders",
+          "Digital prescriptions (sphere / cylinder / axis / addition) tied to patients",
+          "Bootstrap responsive UI with role-based admin / staff dashboards",
+          "MySQL relational schema with foreign-key constraints and stored procedures",
+          "Sales and pending-orders reports with print-friendly templates"
         ],
         "link": null,
         "linkType": null

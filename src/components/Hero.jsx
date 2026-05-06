@@ -51,6 +51,14 @@ const Hero = () => {
 
           <p className="hero-description">{t('hero.description')}</p>
 
+          <figure className="hero-quote">
+            <blockquote>
+              <span className="hero-quote-mark" aria-hidden="true">“</span>
+              {t('hero.quote')}
+            </blockquote>
+            <figcaption>— {t('hero.quoteAuthor')}</figcaption>
+          </figure>
+
           <div className="hero-cta">
             <button className="btn btn-primary" onClick={() => scrollTo('projects')}>
               {t('hero.viewProjects')}

@@ -30,7 +30,7 @@ const LoadingScreen = ({ onFinish }) => {
           <span className="loading-initial">D</span>
         </div>
         <div className="loading-name-block">
-          <span className="loading-name">David Gómez</span>
+          <span className="loading-name">David Herrera</span>
           <span className="loading-role">Full Stack Developer</span>
         </div>
         <div className="loading-bar-track">

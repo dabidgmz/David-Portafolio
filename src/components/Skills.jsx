@@ -138,8 +138,10 @@ const Skills = () => {
       skills: [
         { name: 'Claude AI', level: 88 },
         { name: 'OpenAI / GPT-4', level: 85 },
+        { name: 'Gemini AI', level: 82 },
         { name: 'LangChain', level: 78 },
         { name: 'RAG / Vector Stores', level: 82 },
+        { name: 'AI Chatbots', level: 85 },
         { name: 'Streaming (SSE)', level: 80 },
         { name: 'SAT / CFDI 4.0', level: 85 },
         { name: 'Stripe / OpenPay', level: 80 },

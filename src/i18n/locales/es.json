@@ -21,6 +21,8 @@
     "title": "Hola, soy",
     "subtitle": "Full Stack Developer · Integraciones AI · Sistemas ERP",
     "description": "Construyendo plataformas ERP empresariales con flujos de trabajo asistidos por IA, integraciones fiscales (SAT/CFDI) y arquitecturas backend escalables. Scrum Master y líder de equipo.",
+    "quote": "El cielo no es el límite — es solo el comienzo.",
+    "quoteAuthor": "David Herrera",
     "viewProjects": "Ver Proyectos",
     "contactMe": "Contáctame",
     "scroll": "Scroll",
@@ -425,6 +427,47 @@
           "Integración con CMS Sanity para edición no-técnica",
           "Optimización de imágenes con Astro Assets + AVIF/WebP",
           "Lighthouse 100 en performance, a11y, best practices y SEO"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "gemini-chatbot",
+        "category": "ai",
+        "title": "Chatbot Gemini — Asistente Conversacional",
+        "period": "2025",
+        "role": "AI Engineer",
+        "description": "Chatbot en producción impulsado por Google Gemini. Memoria conversacional multi-turno, function calling para consultas en vivo y UI streaming con markdown + resaltado de código.",
+        "tags": ["Gemini AI", "Node.js", "TypeScript", "Function Calling", "Streaming", "React"],
+        "highlights": [
+          "Google Gemini Pro / Flash con memoria conversacional multi-turno",
+          "Function calling para datos en vivo: pedidos, inventario, FAQ",
+          "Respuestas streaming (SSE) con markdown + bloques de código resaltados",
+          "Plantillas de prompts y control de tono por tenant",
+          "Tracking de tokens y dashboard de costos por conversación",
+          "Rate limiting y prevención de abuso con Redis",
+          "Widget embebible para cualquier web (script drop-in)"
+        ],
+        "link": null,
+        "linkType": null
+      },
+      {
+        "id": "optica-pos",
+        "category": "erp",
+        "title": "Ópticos POS — Sistema para Óptica",
+        "period": "2024",
+        "role": "Full Stack Developer",
+        "description": "Sistema en PHP nativo (POO) para una óptica. Gestiona catálogo de productos, sistema de apartados, agendamiento de citas y recetas digitales — todo desde un solo dashboard con Bootstrap.",
+        "tags": ["PHP (Nativo)", "POO", "MySQL", "Bootstrap", "JavaScript", "Web"],
+        "highlights": [
+          "PHP nativo con POO estricta (modelos, controllers, services, repositories)",
+          "Catálogo de productos: armazones, lentes y pupilentes con stock y precios",
+          "Sistema de apartado con anticipos y políticas de vencimiento",
+          "Agendamiento de citas con vista de calendario y recordatorios",
+          "Recetas digitales (esfera / cilindro / eje / adición) ligadas a pacientes",
+          "UI Bootstrap responsiva con dashboards admin / empleado por rol",
+          "Schema MySQL relacional con foreign keys y stored procedures",
+          "Reportes de ventas y apartados pendientes con plantillas imprimibles"
         ],
         "link": null,
         "linkType": null
